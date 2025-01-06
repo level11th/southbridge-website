@@ -1,0 +1,43 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Southbridge documentation
+defaultContentLanguage: en
+enableRobotsTXT: false
+enableGitInfo: false
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - name: Documentation
+      pageRef: /docs
+      weight: 1
+    - name: Search
+      weight: 2
+      params:
+        type: search
+params:
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+
+displayUpdatedDate: true
+dateFormat: "January 2, 2006"
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
