@@ -15,11 +15,24 @@ Before starting, you need to have the following software installed:
 
 you need to have these files:
 - App image
+- table.sql (database schema)
 - genesis.sql (initialize data)
 
 #### Steps
 
 {{% steps %}}
+
+### Prepare database schema SQL files
+Southbridge application image contain matched database schema in `/home/nonroot/table.sql`
+
+```shell
+# this command create a docker container and copy table.sql out from the container
+
+cid=$(docker create -q image:tag)
+docker cp $cid:/home/nonroot/table.sql table.sql && docker rm $cid
+```
+
+incase of `genesis.sql`, our team will provide you via contact.
 
 ### Start PostgreSQL server
 
@@ -30,7 +43,10 @@ docker run --name pg -e POSTGRES_PASSWORD=mysecretpassword -d postgres:17.2
 # create database name
 docker exec pg createdb -U postgres {database name}
 
-# import initialize data
+# initalize database schema from table.sql
+docker exec -i pg psql -U postgres {database name} < table.sql
+
+# import initial data from genesis.sql
 docker exec -i pg psql -U postgres {database name} < genesis.sql
 
 # don't forget to subsitute {database name}
