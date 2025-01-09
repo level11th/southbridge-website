@@ -51,7 +51,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./postgresql-data:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql/data
     healthcheck:
       test: "pg_isready -U postgres -d postgres"
       interval: 10s
@@ -73,5 +73,6 @@ services:
       - pgadmin-data:/var/lib/pgadmin
 
 volumes:
+  pg-data:
   pgadmin-data:
 ```

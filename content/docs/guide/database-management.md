@@ -137,3 +137,27 @@ Command Breakdown:
   - **`-v`**: Enables verbose mode, providing detailed output during the restoration process.
   - **`-d postgres`**: Specifies the name of the database to connect to for executing the restore process. The database `postgres` is often used as a placeholder for restoration.
 - **`< db.dump`**: Redirects the contents of the `db.dump` file on the host machine to the `pg_restore` command inside the container.
+
+#### Restore to specific database
+this example will show how to restore backup file to specific database.
+```bash
+docker exec -i pg pg_restore -U postgres -Fc -v -d my_foo_db < db.dump
+```
+another useful flags
+- **--no-privileges**: Prevent restoration of access privileges (grant/revoke commands).
+- **--no-owner**: Do not output commands to set ownership of objects to match the original database
+- **--disable-triggers**: It instructs pg_dump to include commands to temporarily disable triggers on the target tables while the data is restored.
+
+#### Restore only specific table
+```bash
+docker exec -i pg pg_restore -U postgres --data-only --disable-triggers -Fc -v -d my_foo_db -t my_foo_table < db.dump
+```
+
+#### Restore using pg_dump pipe to pg_restore
+```bash
+docker exec -i pg pg_dump -Fc -d "conn string" | docker exec -i pg pg_restore -U postgres -d my_foo_db --no-privileges --no-owner
+```
+
+#### More details
+- [pg_dump official docs](https://www.postgresql.org/docs/current/app-pgdump.html)
+- [pg_restore official docs](https://www.postgresql.org/docs/current/app-pgrestore.html)
