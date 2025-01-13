@@ -35,7 +35,8 @@ Below is the explanation of each environment variable of the app:
 ### **Database Configuration**
 
 -   **`DB_URL`**: `postgres://postgres:mysecretpassword@localhost:5432/lv11?sslmode=disable`  
-    Connection string for the PostgreSQL database. Includes username, password, host, port and database name.
+    Connection string for the PostgreSQL database. Includes username, password, host, port and database name.  
+    [Learn more about connection string](https://pkg.go.dev/github.com/lib/pq#hdr-Connection_String_Parameters)
 
 -   **`DB_MAX_IDLE_CONNS`**: `16`  
     Maximum number of idle connections in the database connection pool.
@@ -144,7 +145,7 @@ TLS_CERT=
 TIMEZONE=Asia/Bangkok
 APP_ENV=PRODUCTION
 
-DB_URL=postgres://postgres@localhost/lv11?sslmode=disable
+DB_URL=postgres://postgres:mysecretpassword@localhost:5432/lv11?sslmode=disable
 DB_MAX_IDLE_CONNS=16
 DB_MAX_OPEN_CONNS=16
 DB_CONN_MAX_LIFETIME=0

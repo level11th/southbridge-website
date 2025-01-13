@@ -65,10 +65,10 @@ The essential configurations that apply to the global system can be managed unde
 -   **`DEFAULT_PRICESOURCE_ID`**: number  
     Specifies the default price source ID.
 
--   **`DEFAULT_CURRENCY_ID`**: number
+-   **`DEFAULT_CURRENCY_ID`**: number  
     Specifies the system's default currency ID.
 
--   **`THB_CURRENCY_ID`**: number
+-   **`THB_CURRENCY_ID`**: number  
     Specifies Thai Baht currency ID.
 
 --- 
