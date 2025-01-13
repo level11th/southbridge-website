@@ -18,6 +18,7 @@ services:
     container_name: chromium
     restart: always
     shm_size: 2G # increase if not enough
+    init: true # prevent zombie processes
 
   app:
     image: path-to-image:${IMAGE_TAG}
