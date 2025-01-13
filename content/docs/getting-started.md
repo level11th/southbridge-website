@@ -50,8 +50,8 @@ docker exec -i pg psql -U postgres {database name} < table.sql
 docker exec -i pg psql -U postgres {database name} < genesis.sql
 
 # don't forget to subsitute {database name}
-# postgres image will create superuser name postgres as a default. Please refer to the image documentation on how to config.
 ```
+**Note:** PostgreSQL image will create superuser name postgres as a default. Please refer to the [PostgreSQL docker hub](https://hub.docker.com/_/postgres) on how to config.
 
 ### Start Chromium headless browser
 
@@ -60,8 +60,9 @@ Southbridge using chromium headless browser for rendering PDF.
 Start chromium headless browser:
 
 ```shell
-docker run --rm -d -p 9222:9222 --rm --name chromium --shm-size 2G chromedp/headless-shell:latest
+docker run --rm -d -p 9222:9222 --init --name chromium --shm-size 2G chromedp/headless-shell:latest
 ```
+More details about the image at [docker-headless-shell](https://github.com/chromedp/docker-headless-shell)
 
 ### Configure application enviroment
 

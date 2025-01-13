@@ -4,9 +4,7 @@ title: Compose
 weight: 3
 ---
 
-you can use docker compose for define deployment specs instead of docker run.
-this method is recommended.
-below are examples:
+You can use Docker Compose to define deployment specifications instead of using docker run. This method is recommended. Below are some examples:
 
 ### Application
 `app.yaml`

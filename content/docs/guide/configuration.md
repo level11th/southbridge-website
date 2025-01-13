@@ -18,10 +18,10 @@ Below is the explanation of each environment variable of the app:
 -   **`APP_ADDR`**: `127.0.0.1:3000`  
     Specifies the address and port where the application will run.
 
--   **`TLS_KEY`**: _(empty)_  
+-   **`TLS_KEY`**:
     Path to the TLS private key file for listen with TLS. If empty, TLS will not be enabled.
 
--   **`TLS_CERT`**: _(empty)_  
+-   **`TLS_CERT`**:
     Path to the TLS certificate file. Works with `TLS_KEY` to secure connections.
 
 -   **`TIMEZONE`**: `Asia/Bangkok`  
@@ -34,8 +34,8 @@ Below is the explanation of each environment variable of the app:
 
 ### **Database Configuration**
 
--   **`DB_URL`**: `postgres://postgres@localhost/lv11?sslmode=disable`  
-    Connection string for the PostgreSQL database. Includes username, host, and database name.
+-   **`DB_URL`**: `postgres://postgres:mysecretpassword@localhost:5432/lv11?sslmode=disable`  
+    Connection string for the PostgreSQL database. Includes username, password, host, port and database name.
 
 -   **`DB_MAX_IDLE_CONNS`**: `16`  
     Maximum number of idle connections in the database connection pool.
@@ -88,9 +88,9 @@ Below is the explanation of each environment variable of the app:
 -   **`SMTP_PORT`**: `25`  
     Port used for SMTP communication.
 -   **`SMTP_USERNAME`**: `foo`  
-    Username for SMTP authentication.
+    Username for SMTP authentication. (optional)
 -   **`SMTP_PASSWORD`**: `bar`  
-    Password for SMTP authentication.
+    Password for SMTP authentication. (optional)
 
 ---
 
@@ -121,10 +121,15 @@ Below is the explanation of each environment variable of the app:
 
 ---
 
-### **Garbage Collection Configuration**
+### **Go releated configuration**
+more details [Go Runtime](https://pkg.go.dev/runtime)
 
 -   **`GOGC`**:
     Configures the garbage collection (GC) target percentage in Go. Higher values decrease GC frequency and memory use, while lower values increase frequency and decrease latency. Defaults to `100` if not set.
+
+-   **`GOMEMLIMIT`**:
+    sets a soft memory limit for the runtime. (eg. 5GiB)
+
 
 ---
 
@@ -172,4 +177,5 @@ LOGGER_TYPE=text
 LOG_HEALTH_CHECK=false
 
 GOGC=80
+GOMEMLIMIT=5GiB
 ```

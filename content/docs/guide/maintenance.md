@@ -3,17 +3,17 @@ title: Maintenance
 weight: 4
 ---
 
-### Check Southbridge version
+### Check Southbridge Version
 
 ```shell
 docker run --rm app-image:tag version
 ```
 
-### Update database notify trigger
-Soutbridge application rely on PostgreSQL trigger feature to notify an mutation event of tables. use this command to recreate every notification triggers in database. (`super user` is required)
+### Update Database Notify Trigger
+The Southbridge application relies on PostgreSQL's trigger feature to notify mutation events on tables. Use the following command to recreate all notification triggers in the database. (`superuser` privileges are required.)
 
 ```shell
-docker run --rm app-image:tag update notify [db connection with super user]
+docker run --rm app-image:tag update notify [db connection with superuser]
 ```
 
 or
@@ -22,9 +22,17 @@ or
 docker run --rm -e SUPER_USER_DB_URL="db_conn_str" app-image:tag update notify
 ```
 
-### Update database Southbridge application's role
-update database roles to match current version of the application
+### Update Database Roles for the Southbridge Application
+Use this command to update the database roles to match the current version of the application.
 
 ```shell
 docker run --rm app-image:tag update role [db connection]
 ```
+
+### Hash a Given Password
+This command is useful when you need to change a user's password by directly replacing the hashed password in the database. It will output the hashed version of the provided password.
+
+```shell
+docker run --rm app-image:tag hash [password]
+``` 
+
