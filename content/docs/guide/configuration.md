@@ -18,11 +18,14 @@ Below is the explanation of each environment variable of the app:
 -   **`APP_ADDR`**: `127.0.0.1:3000`  
     Specifies the address and port where the application will run.
 
--   **`TLS_KEY`**:
+-   **`TLS_KEY`**: (deprecated use TLS_PATHS instead)  
     Path to the TLS private key file for listen with TLS. If empty, TLS will not be enabled.
 
--   **`TLS_CERT`**:
+-   **`TLS_CERT`**: (deprecated use TLS_PATHS instead)  
     Path to the TLS certificate file. Works with `TLS_KEY` to secure connections.
+
+-   **`TLS_PATHS`**: `cert:key`  
+    Specifies the paths to the server's TLS certificate files in the format: `/path/to/cert:/path/to/key`.  
 
 -   **`TIMEZONE`**: `Asia/Bangkok`  
     Sets the application's timezone. This affects date and time operations.
@@ -92,13 +95,21 @@ Below is the explanation of each environment variable of the app:
     Username for SMTP authentication. (optional)
 -   **`SMTP_PASSWORD`**: `bar`  
     Password for SMTP authentication. (optional)
+-   **`SMTP_INSECURE_SKIP_VERIFY`**: `false`  
+    Skips TLS verification for SMTP connections.
+-   **`SMTP_TLS_PATHS`**: `cert:key:ca`  
+    Specifies the paths to the SMTP's TLS certificate files in the format: `/path/to/cert:/path/to/key:/path/to/ca`.  
+    You can also provide only the CA file, for example: `::/path/to/ca`.
+
+**Note:** SMTP will upgrade to a TLS connection if TLS is available via the STARTTLS SMTP extension automatically.  
+if the `SMTP_TLS_PATHS` or `SMTP_INSECURE_SKIP_VERIFY` environment variables are provided, it will establish a connection using TLS without upgrading the connection.
 
 ---
 
 ### **LDAP Configuration**
 
--   **`LDAP_DIAL_URL`**: `ldap://localhost:389`  
-    URL for connecting to the LDAP server.
+-   **`LDAP_DIAL_URL`**: `ldap://localhost:389` or `ldaps://localhost:636`  
+    URL for connecting to the LDAP server. use ldaps:// for tls connection
 -   **`LDAP_ROOT_DN`**: `cn=user-ro,dc=alibnr,dc=com`  
     Root distinguished name for LDAP access.
 -   **`LDAP_ROOT_PASSWORD`**: `ro_pass`  
@@ -107,8 +118,15 @@ Below is the explanation of each environment variable of the app:
     Base distinguished name for user authentication.
 -   **`LDAP_AUTH_FILTER`**: `(&(objectClass=inetOrgPerson)(uid={{ .Username }}))`  
     LDAP query filter for authenticating users.
--   **`LDAP_INSECURE_SKIP_VERIFY`**: `true`  
+-   **`LDAP_INSECURE_SKIP_VERIFY`**: `false`  
     Skips TLS verification for LDAP connections.
+-   **`LDAP_TLS_PATHS`**: `cert:key:ca`  
+    Specifies the paths to the LDAP's TLS certificate files in the format: `/path/to/cert:/path/to/key:/path/to/ca`.  
+    You can also provide only the CA file, for example: `::/path/to/ca`.
+
+**Note:** The difference between `ldap://` and `ldaps://` is that 
+- `ldap://` will upgrade to a TLS connection only if the `LDAP_TLS_PATHS` or `LDAP_INSECURE_SKIP_VERIFY` environment variables are provided. 
+- `ldaps://` will establish a connection using TLS without upgrading the connection.
 
 ---
 
@@ -139,8 +157,7 @@ more details [Go Runtime](https://pkg.go.dev/runtime)
 ```env
 APP_BASE_URL=http://localhost:8080
 APP_ADDR=127.0.0.1:8080
-TLS_KEY=
-TLS_CERT=
+TLS_PATHS=/path/to/cert:/path/to/key
 
 TIMEZONE=Asia/Bangkok
 APP_ENV=PRODUCTION
@@ -164,14 +181,17 @@ SMTP_HOSTNAME=smtp.com
 SMTP_PORT=25
 SMTP_USERNAME=foo
 SMTP_PASSWORD=bar
+SMTP_INSECURE_SKIP_VERIFY=false
+SMTP_TLS_PATHS=/path/to/cert:/path/to/key:/path/to/ca
 
 # LDAP
-LDAP_DIAL_URL=ldap://localhost:389
+LDAP_DIAL_URL=ldap://localhost:389 or ldaps://localhost:636
 LDAP_ROOT_DN=cn=user-ro,dc=alibnr,dc=com
 LDAP_ROOT_PASSWORD=ro_pass
 LDAP_AUTH_DN=dc=alibnr,dc=com
 LDAP_AUTH_FILTER="(&(objectClass=inetOrgPerson)(uid={{ .Username }}))"
-LDAP_INSECURE_SKIP_VERIFY=true
+LDAP_INSECURE_SKIP_VERIFY=false
+LDAP_TLS_PATHS=/path/to/cert:/path/to/key:/path/to/ca
 
 # possible values text, json
 LOGGER_TYPE=text
