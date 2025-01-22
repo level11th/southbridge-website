@@ -36,3 +36,17 @@ This command is useful when you need to change a user's password by directly rep
 docker run --rm app-image:tag hash [password]
 ``` 
 
+
+### Debug the runtime
+
+The Southbridge application uses [gcr.io/distroless/static-debian12:nonroot](https://github.com/GoogleContainerTools/distroless) as its runtime.
+
+You can debug the runtime using the image tag `gcr.io/distroless/static-debian12:debug-nonroot`.  
+For example:
+
+```shell
+docker run --rm -it gcr.io/distroless/static-debian12:debug-nonroot
+
+$ id
+uid=65532(nonroot) gid=65532(nonroot) groups=65532(nonroot)
+```
