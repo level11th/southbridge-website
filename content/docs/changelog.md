@@ -5,6 +5,22 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v.1.7.6
+- **Bug Fix**:
+  - app: fix unhandle 500 error
+  - app: logger not log when panic.
+  - app: hide unuse side module
+  - dashboard: don't show expire password for AD user
+  - resource: int rate cond preview
+  - help: fix wrong link
+  - bechmark: remove benchmark index not cascade delete bechmark index portfolio
+  - compliance: internal error on report on ports with no data
+  - cashio: check bank account open / close
+  - user: gray bg on inactive user
+  - invps: fix wrong error receiver
+  - investment: fix investment matrix not showing errors on outer component
+  - sysmgmt: fix numerical forms in number section
+
 ### v.1.7.5
 
 - **Bug Fix**: 
