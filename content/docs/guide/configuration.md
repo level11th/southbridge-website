@@ -24,8 +24,8 @@ Below is the explanation of each environment variable of the app:
 -   **`TLS_CERT`**: (deprecated use TLS_PATHS instead)  
     Path to the TLS certificate file. Works with `TLS_KEY` to secure connections.
 
--   **`TLS_PATHS`**: `cert:key`  
-    Specifies the paths to the server's TLS certificate files in the format: `/path/to/cert:/path/to/key`.  
+-   **`TLS_PATHS`**: `cert:key`(PEM)  
+    Specifies the paths to the server's TLS certificate files in the format: `/path/to/cert:/path/to/key`.
 
 -   **`TIMEZONE`**: `Asia/Bangkok`  
     Sets the application's timezone. This affects date and time operations.
@@ -97,7 +97,7 @@ Below is the explanation of each environment variable of the app:
     Password for SMTP authentication. (optional)
 -   **`SMTP_INSECURE_SKIP_VERIFY`**: `false`  
     Skips TLS verification for SMTP connections.
--   **`SMTP_TLS_PATHS`**: `cert:key:ca`  
+-   **`SMTP_TLS_PATHS`**: `cert:key:ca`(PEM)  
     Specifies the paths to the SMTP's TLS certificate files in the format: `/path/to/cert:/path/to/key:/path/to/ca`.  
     You can also provide only the CA file, for example: `::/path/to/ca`.
 
@@ -120,7 +120,7 @@ if the `SMTP_TLS_PATHS` or `SMTP_INSECURE_SKIP_VERIFY` environment variables are
     LDAP query filter for authenticating users.
 -   **`LDAP_INSECURE_SKIP_VERIFY`**: `false`  
     Skips TLS verification for LDAP connections.
--   **`LDAP_TLS_PATHS`**: `cert:key:ca`  
+-   **`LDAP_TLS_PATHS`**: `cert:key:ca`(PEM)  
     Specifies the paths to the LDAP's TLS certificate files in the format: `/path/to/cert:/path/to/key:/path/to/ca`.  
     You can also provide only the CA file, for example: `::/path/to/ca`.
 
@@ -157,7 +157,7 @@ more details [Go Runtime](https://pkg.go.dev/runtime)
 ```env
 APP_BASE_URL=http://localhost:8080
 APP_ADDR=127.0.0.1:8080
-TLS_PATHS=/path/to/cert:/path/to/key
+TLS_PATHS=/path/to/cert.pem:/path/to/key.pem
 
 TIMEZONE=Asia/Bangkok
 APP_ENV=PRODUCTION
@@ -182,7 +182,7 @@ SMTP_PORT=25
 SMTP_USERNAME=foo
 SMTP_PASSWORD=bar
 SMTP_INSECURE_SKIP_VERIFY=false
-SMTP_TLS_PATHS=/path/to/cert:/path/to/key:/path/to/ca
+SMTP_TLS_PATHS=/path/to/cert.pem:/path/to/key.pem:/path/to/ca.pem
 
 # LDAP
 LDAP_DIAL_URL=ldap://localhost:389 or ldaps://localhost:636
@@ -191,7 +191,7 @@ LDAP_ROOT_PASSWORD=ro_pass
 LDAP_AUTH_DN=dc=alibnr,dc=com
 LDAP_AUTH_FILTER="(&(objectClass=inetOrgPerson)(uid={{ .Username }}))"
 LDAP_INSECURE_SKIP_VERIFY=false
-LDAP_TLS_PATHS=/path/to/cert:/path/to/key:/path/to/ca
+LDAP_TLS_PATHS=/path/to/cert.pem:/path/to/key.pem:/path/to/ca.pem
 
 # possible values text, json
 LOGGER_TYPE=text
