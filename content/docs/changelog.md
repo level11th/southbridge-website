@@ -5,8 +5,28 @@ next: /docs/changelog
 prev: /docs
 ---
 
-### v.1.7.6
-- **Bug Fix**:
+### v1.8.0
+- Features:
+* Added a search box to the backlog sidebar menu.  
+* Added new role for specific company.  
+* Added monthly report for specific company.  
+* Warn users about portfolio end dates.  
+* Added a clear button to forms with preset features.  
+* Added a request timeout report.  
+
+- Fixes:
+  - Resource: Fixed issue preventing updates to resource preset names.  
+  - Resource: Validated interest rate condition limits for the "range-to" field.  
+  - System Management: Fixed issue preventing admin user edits.  
+  - Tracing: Removed tracing for fetching FX prices in the production environment.  
+  - Compliance: Fixed incorrect pagination.  
+  - Navigation Summary Report: Fixed an edge case causing an infinite loop.  
+  - Equity Price: Removed duplication.  
+  - Notification: Send a welcome ping notification to clients to prevent reconnection issues.  
+  - Dashboard: Do not show "expired password" warning if there is no latest update.  
+
+### v1.7.6
+- Fixes:
   - app: fix unhandle 500 error
   - app: logger not log when panic.
   - app: hide unuse side module
@@ -21,9 +41,9 @@ prev: /docs
   - investment: fix investment matrix not showing errors on outer component
   - sysmgmt: fix numerical forms in number section
 
-### v.1.7.5
+### v1.7.5
 
-- **Bug Fix**: 
+- Fixes: 
   - Resolve duplicate error logs  
   - Remove line breaks from LDAP error messages  
   - Allow SMTP configuration without a username and password  
