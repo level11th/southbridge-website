@@ -7,12 +7,12 @@ prev: /docs
 
 ### v1.8.0
 - Features:
-* Added a search box to the backlog sidebar menu.  
-* Added new role for specific company.  
-* Added monthly report for specific company.  
-* Warn users about portfolio end dates.  
-* Added a clear button to forms with preset features.  
-* Added a request timeout report.  
+  - Added a search box to the backlog sidebar menu.  
+  - Added new role for specific company.  
+  - Added monthly report for specific company.  
+  - Warn users about portfolio end dates.  
+  - Added a clear button to forms with preset features.  
+  - Added a request timeout report.  
 
 - Fixes:
   - Resource: Fixed issue preventing updates to resource preset names.  
