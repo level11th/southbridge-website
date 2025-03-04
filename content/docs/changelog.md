@@ -5,6 +5,29 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.9.0
+- Features:
+  - Added a confirmation modal for WHTax.  
+  - Added a "Select All" button for the Daily Performance report.  
+  - Displayed the ID on the preview for each configurable resource in the global configuration.  
+  - Automatically filtered out unavailable bank accounts when creating or editing cash security.  
+
+- Fixes:
+  - Investment, compliance: The aggregate order rule should not check for the same portfolio.  
+  - Daily: Transactions of type "convert unit" should not be counted in the corporate actions list.  
+  - Corporate Actions: Fixed a data race issue in the corporate action form state.  
+  - Corporate Actions: Fixed an issue where XD stock and cash types could not be created on the same date.  
+  - Fee Code: A warning is now displayed when updating the "Fee Code Period From" and "Period To" fields.  
+  - User Management: Disabled autocomplete when creating a user.  
+  - Employee: Added a missing "Confirm Password" input box when changing passwords.  
+  - Security Type: Creating a security type now disallows a nullable currency and removes the currency requirement.  
+  - Reports: Fixed an issue where performance groups without a benchmark index caused a user error.  
+  - Investment: The zero-out lot size is now fixed at 1 instead of 0.  
+  - Resources: Fixed an issue preventing the update of currency pairs.  
+  - Daily: Fixed an issue preventing FX price adjustments.  
+  - Daily: The "EQ Price Adj" feature now only shows mapped price sources with securities.  
+
+
 ### v1.8.0
 - Features:
   - Added a search box to the backlog sidebar menu.  
