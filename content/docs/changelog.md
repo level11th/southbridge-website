@@ -5,6 +5,10 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.10.0
+- Features:
+  - Added deutsche bank export
+
 ### v1.9.0
 - Features:
   - Added a confirmation modal for WHTax.  
