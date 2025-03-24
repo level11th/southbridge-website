@@ -5,6 +5,22 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.11.0
+- Features:
+  - Added Liquidity stress test
+  - Rework module-wide investment model
+
+- Fixes:
+  - daily: handle missing split & inc generate error
+  - daily: wrong main cash in cashIO
+  - resources: disable date duplicate in calendar
+  - resources: currency pair move model detail input
+  - investment: column width tuning
+  - investment: incorrect placed progress when placed on multiple brokers
+  - dealing: hide Broker Group Target
+  - report: implement unsupport tx in cash
+  - report: handle daily performance no portfolio error message
+
 ### v1.10.0
 - Features:
   - Added deutsche bank export
