@@ -5,6 +5,23 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.12.0
+- Features
+  - Improved event pub/sub publish retry logic  
+  - Stricter cash security checks when deleting  
+  - Hide Fast Mode in Cash IO (malfunctioning and unused)  
+  - Nav-summary: changed table title language to English  
+  - Prepared database for upcoming compliance features (proving and rules)
+
+- Fixes
+  - Investment: allow non-active cash securities if associated positions have zero cash  
+  - Fixed incorrect base currency in FX  
+  - FX trade: auto-calculation of Forward Rate  
+  - Fixed overflow issue in Portfolio Create form for Trustee, Registrar, Auditor, and dropdown inputs  
+  - Investment: issue list displayed “Inv. Date +X” before item was clicked  
+  - Hide Fast Mode in Cash IO (malfunctioning)  
+  - Fixed width issue when selecting long items in Equity Issuer  
+
 ### v1.11.0
 - Features:
   - Added Liquidity stress test
