@@ -5,6 +5,20 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.13.0
+- Features
+  - Added new roles: Compliance and CMD  
+  - Added log view permission for PF Operation and PF Admin  
+  - Added Cash Transaction Type filter on the History Transactions page  
+  - Fulfilled export requirements for Cash In/Out DB  
+
+- Fixes
+  - Transaction table notification now clears mutated selected rows  
+  - Sorted list and security currency pair list in the Main Cash Account preview details page  
+  - Input size bug in History Transactions portfolio field  
+  - Deletion issue in Dealing Allocation  
+  - Redemption SIM and Left Cash Currency issues  
+
 ### v1.12.0
 - Features
   - Improved event pub/sub publish retry logic  
