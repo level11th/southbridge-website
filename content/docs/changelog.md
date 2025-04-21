@@ -5,6 +5,12 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.13.1
+- Fixes
+  - Create main cash account select portfolio set when no cash security is present
+  - Unable to create or update user command role
+  - Export Cash In/Out for DB – filename issue
+
 ### v1.13.0
 - Features
   - Added new roles: Compliance and CMD  
