@@ -5,6 +5,29 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.14.0
+- Features
+  - Removed sector number
+  - Closed portfolio toggle in resource portfolio
+  - Compliance rule approval
+  - Sector/Country concentration
+  - Country with Cash concentration
+  - Change Company's country to drop down
+  - Investment Matrix : Concentration View accessible from button to the right of Security column.
+  - Investment Matrix : Issue severity dots can appear on Concentration View button, signifying issues related to one of the cells that is only visible inside a Concentration View.
+  - Investment Matrix : Units and Value perspective : Currency code displayed on each applicable cells.
+  - Investment Matrix : Units and Value perspective : "Local" checkbox appears to the right of perspective selector. Checking it converts all cash and value cells to portfolio's local currency. The currency code in each cell changes to show what was the currency and the new converted currency.
+  - Investment Matrix : Issue listing table : Improved Cause column with coloring based on the type of cause.
+  - Compliance > Investment Issue > Issue listing table : Improved Cause column with coloring based on the type of cause.
+
+- Fixes
+  - Reorder exporting investment columns
+  - Exporting FX filename
+  - Handle no unpaid fee tx error
+  - Rounding in cash io fee calculation
+  - Tax payer requirement when tax not equal to 0
+  - UI investment refinement (Table view & Issues)
+
 ### v1.13.2
 - Fixes
   - "Success Notification" in monthly not automatically close.
