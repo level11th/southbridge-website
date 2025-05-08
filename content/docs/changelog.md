@@ -5,6 +5,13 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.13.2
+- Fixes
+  - "Success Notification" in monthly not automatically close.
+  - Monthly no paper setting when empty db
+  - Missing role permission.
+  - Export Investment and FX
+
 ### v1.13.1
 - Fixes
   - Create main cash account select portfolio set when no cash security is present
