@@ -5,6 +5,18 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.15.0
+- Features
+  - Consolidated report (POC)
+  - Set zero lot size in Investment
+  - Dealing > Allocation : Investment Date of the Investment that creates the order of that allocation is now visible above Trade Date input form.
+  - Dealing > Allocation : Changing Trade Date will display a modal explaining possible consequences to the investment simulation in the Investment module.
+
+- Fixes
+  - Corrected the Main Cash Account query filter in edge cases.
+  - Handle null value of FX input amount.
+  - (Investment / Compliance) a bug where "Aggregated Equity Units Bought/Sold in a Day Per Portfolio" rule left operand was aggregating system-wide instead of per portfolio.
+
 ### v1.14.0
 - Features
   - Removed sector number
