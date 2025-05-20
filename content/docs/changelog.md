@@ -8,13 +8,14 @@ prev: /docs
 ### v1.15.0
 - Features
   - Consolidated report (POC)
-  - Set zero lot size in Investment
+  - Investment: When attempting to sell all units by using Set mode and typed in 0% or 0 Units, Lot Size information on the bottom right of the popup shows that automatic lot size adjustment to 1 is going to occur.
   - Dealing > Allocation : Investment Date of the Investment that creates the order of that allocation is now visible above Trade Date input form.
   - Dealing > Allocation : Changing Trade Date will display a modal explaining possible consequences to the investment simulation in the Investment module.
 
 - Fixes
   - Corrected the Main Cash Account query filter in edge cases.
   - Handle null value of FX input amount.
+  - Investment : Correctly use lot size of 1 instead of 0 when attempting to sell every units (Set mode, inputting 0 % / 0 Units)
   - (Investment / Compliance) a bug where "Aggregated Equity Units Bought/Sold in a Day Per Portfolio" rule left operand was aggregating system-wide instead of per portfolio.
 
 ### v1.14.0
