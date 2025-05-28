@@ -5,6 +5,14 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.16.0
+- Features
+  - monthly report: remove fund financial section
+  - be able to export portfolio information (Fund) to custodian
+  - refine consolidate report
+- Fixes
+  - export Investment BIC_CODE,  Narrative Line1
+
 ### v1.15.0
 - Features
   - Consolidated report (POC)
