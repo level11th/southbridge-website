@@ -5,6 +5,33 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.17.0
+- Features
+  - Report: Support for HWM value per unit
+  - Portfolio: Updated export fund to match new requirements
+  - Compliance : New left operand "Tradable Units"
+  - Compliance : New left operand "Equity Value (in Local Currency)"
+  - Investment : Lot Size display automatically changes to overriding value when user attempt to sell all units (Percentage Perspective: Set to 0%, Unit Perspective: Set to 0 units)
+  - Dealing : Investment date is visible above Trade Date input box. Trade Date input box displays warning if user changes it from the Investment Date with explanation of the possible consequences.
+  - Investment : Import Orders feature now dynamically determine the lot size of imported orders based on input XLSX. (e.g. Change from 100 to 1 automatically if the cell contains odd-lot units.) Added a result modal showing the details of your imports, including the lot size that was decided from your input.
+  - Reworked application background workers
+  - New HTML error page when previewing daily performance and monthly reports
+
+- Fixes
+  - Investment / Compliance : If user just edited Portfolio Model, rule evaluation was mistakenly using the pre-edit Portfolio Model members in the calculation.
+  - Investment : Fix Country with Cash Concentration view not grouping currency found in the Portfolio Model but not in any Portfolio in the correct country.
+  - Investment / Compliance : Fix "Aggregated unit sold/bought in a day" left operand that was not summing up the check per each portfolio.
+  - Investment : Fix wrong concentration calculation in investment simulation after selling.
+  - Investment : Fix investment matrix data gathering on load sometimes missing needed data, causing front-end error.
+  - FX: Set wrong base currency when updating FX transaction
+  - FX: How FX pos blottering (position) works underlying to support more new transaction types
+  - Daily: Import Cash IO TX validation failed when there is no fee code
+  - Enquiry: Export investment commission
+  - Edge case where multiple workers try to acquire portfolio tasks
+  - Slow EOD performance
+  - Minor missing validations when creating/updating resources
+  - Minor bugs
+
 ### v1.16.0
 - Features
   - monthly report: remove fund financial section
