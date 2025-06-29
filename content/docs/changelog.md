@@ -5,6 +5,16 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.18.0
+- Features
+  - Market: be able to select price source when import eq, fx price
+  - Compliance: Stress test excel will use formula to calculate Cost Per unit, % NAV
+  - Performance: show standard deviation in daily performance report and monthly report
+  - Monthly: add option to toggle how High-Water Mark per unit, NAV Performance, Fund Financial Report (Revenue, Expense)
+
+- Fixes
+  - EOD process don't error when user forget to set main cash account
+
 ### v1.17.0
 - Features
   - Report: Support for HWM value per unit
