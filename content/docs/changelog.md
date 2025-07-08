@@ -5,6 +5,36 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.19.0 - 2025-07-09
+#### **Changed**
+
+-   Improved warning messages for Equity and FX price imports regarding changes and excessive decimal places.
+-   Enhanced performance of the SD (Standard Deviation) compliance feature.
+    -   Performance and SD (Standard Deviation) are now expressed as percentages.
+    -   BM (Benchmark) Fixed Rate is now calculated directly from the benchmark index rate (rate \* years), with SD set to null.
+    -   Optimized the display of daily performance in PDF and Excel exports.
+        -   Removed "BM since" from the first row.
+        -   Added "BM since" for both performance and SD in each portfolio.
+        -   Applied color-coding to the BM SD.
+
+#### **Added**
+
+-   Checks for securities missing a sector or for sector types without a designated currency.
+-   "Make annualized" checkbox to the SD compliance feature.
+-   "Skip weekend and holidays" checkbox to the SD compliance feature.
+-   A preview button to the SD compliance feature.
+
+#### **Fixed**
+
+-   Corrected a mistake in the left operand explanation for a rule.
+-   Addressed an issue where the transaction deletion timestamp was missing.
+-   Replaced an internal error with a user-facing exception when EOD failed.
+-   Fixed an incorrect query for the benchmark value.
+-   Resolved a missing timeout duration for the "clear selected rows" notification.
+-   Corrected an issue where unposting a transaction did not trigger a warning about a "security sold cost".
+-   Fixed a bug that prevented the selection of a feebase.
+-   Ensured a human-readable log is generated when requesting the creation of a corporate action.
+
 ### v1.18.0
 - Features
   - Market: be able to select price source when import eq, fx price
