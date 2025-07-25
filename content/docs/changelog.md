@@ -5,6 +5,27 @@ next: /docs/changelog
 prev: /docs
 ---
 
+Great! Here is your changelog entry, versioned and dated using the **Keep a Changelog** format:
+
+---
+
+### v1.20.0 - 2025-07-25
+
+#### **Added**
+
+-   Import functionality for benchmark index return.
+-   Support for selling simulations in investment scenarios where there are 0 units to scale.
+
+#### **Changed**
+
+-   Improved warning messages during Equity price import.
+
+#### **Fixed**
+
+-   PF1000 adjusted value now correctly resets after changing the date.
+-   Fixed issue preventing deletion of split and increase transactions in post allocation.
+-   Corrected bugs in fund performance: editing time frames and monthly remark text now works as expected.
+
 ### v1.19.0 - 2025-07-09
 #### **Changed**
 
