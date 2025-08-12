@@ -9,6 +9,14 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.20.1 - 2025-08-12
+
+#### **Fixed**
+- Hide column when selecting PF1000 report.
+- Unable to create PF1000 report mapping in some cases (incorrect unique SQL constraint).
+- Missing FX security type filter in BOT report.
+- Performance: removed excess data when no skip days; incorrect 'since' date.
+
 ### v1.20.0 - 2025-07-25
 
 #### **Added**
