@@ -9,6 +9,27 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.21.0 - 2025-08-15
+
+#### **Added**
+
+-   Post/Close order selection dialog when selecting mixed in/out transactions.
+-   Order Placement Manager and new Allocation Dialogs.
+-   Composite Return and Broker Volume Trade access permissions for Fund Manager and PF Admin.
+
+#### **Changed**
+
+-   Performance Group & Portfolio Benchmark Index: improved preview and edit modal.
+-   Export Investment Orders can now export as type Default and Standard.
+-   Redesigned the report instruction page flow to make it clearer.
+
+#### **Fixed**
+
+-   Missing Report Instruction Signer setup in App Config.
+-   Incorrect behavior in report instruction page.
+-   Incorrect Excel floating-point warning when uploading on FX, Equity, and Benchmark Index pages.
+
+
 ### v1.20.1 - 2025-08-12
 
 #### **Fixed**
