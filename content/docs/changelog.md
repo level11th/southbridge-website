@@ -9,6 +9,22 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.22.0 - 2025-08-18
+
+#### **Added**
+
+-   Dealing > Commission Adjustment: Improved Filters and Export
+
+#### **Changed**
+
+-   Investment > Investment Model: Enhanced Investment Model Listing Table
+
+#### **Fixed**
+
+-   Regression issue with Equity, FX, and benchmark index import malfunction
+-   SQL parameter limit error in report monitoring when handling many items
+
+
 ### v1.21.0 - 2025-08-15
 
 #### **Added**
