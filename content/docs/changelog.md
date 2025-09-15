@@ -9,6 +9,27 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.23.0 - 2025-09-15
+
+#### **Added**
+
+-   Compliance: reimplemented VaR and VaR Backtesting.
+-   Exchange Country Concentration rules.
+-   Assumption preset option in Stress Test.
+
+#### **Changed**
+
+-   Pop-up wording when generating XD.
+-   Dealing: unit cost precision is now fixed to 6 regardless of price scale.
+-   Daily Performance: now possible to select by portfolios.
+
+#### **Fixed**
+
+-   Dealing: fixed order listing failure when approval rule exists.
+-   Dealing: added dedicated error if main cash account for creating TX is not found.
+-   Compliance rule inversion issue.
+-   Missing activity log when updating Corporate Actions.
+
 ### v1.22.0 - 2025-08-18
 
 #### **Added**
