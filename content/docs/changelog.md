@@ -9,6 +9,25 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.24.0 - 2025-10-02
+
+#### **Added**
+
+-   Compliance: VaR price filler
+
+#### **Changed**
+
+-   New fee type: "Fund Administration Fee"
+-   Gain/Loss report: added percentage column
+
+#### **Fixed**
+
+-   Monthly: failed to upload when the portfolio code was the same as a deleted one
+-   Log: missing activity log when performing resource preset CRUD
+-   Daily Performance: internal error when the portfolio had no returns since the start date
+-   Portfolio performance policy could not be removed in some cases
+-   Missing timestamp when creating fee transaction
+
 ### v1.23.0 - 2025-09-15
 
 #### **Added**
