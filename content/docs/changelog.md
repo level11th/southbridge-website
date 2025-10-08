@@ -9,6 +9,22 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.25.0 - 2025-10-08
+
+#### **Added**
+
+-   Introduced equity export functionality.
+
+#### **Changed**
+
+-   Updated investment module to allow investments without an account cash balance.
+
+#### **Fixed**
+
+-   Resolved an issue in EOD where split and increase transactions were incorrectly auto-generated or assigned the wrong currency.
+-   Corrected formatting issues in the investment order export.
+
+
 ### v1.24.0 - 2025-10-02
 
 #### **Added**
