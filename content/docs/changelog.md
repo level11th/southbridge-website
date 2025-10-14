@@ -9,6 +9,23 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.26.0 - 2025-10-14
+
+#### **Added**
+
+-   Allocation export for MSTH.
+
+#### **Changed**
+
+-   Investment Matrix: The cells in the Value Perspective view are now interactable, allowing investments to be made in terms of value instead of only percentage or units as previously available.
+
+#### **Fixed**
+
+-   Prevented dealers from deleting and confirming `CASH` transactions on the Post Allocation page, which was unexpected behavior.
+-   Fixed the issue with reporting the maximum number of days for VaR/VaR backtesting options.
+-   Handled cases where an investment group or model has zero members.
+
+
 ### v1.25.0 - 2025-10-08
 
 #### **Added**
