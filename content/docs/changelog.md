@@ -9,6 +9,21 @@ Great! Here is your changelog entry, versioned and dated using the **Keep a Chan
 
 ---
 
+### v1.27.0 - 2025-10-21
+
+#### **Changed**
+
+- Dealing: Commission Adjustment: Added an option to query unconfirmed transactions by **Trade Date** instead of previously using **Create Date**. The earlier version incorrectly labeled the date range as “Trade Date,” which has now been corrected to “Create Date.”
+
+- Dealing: Commission Adjustment: The unconfirmed transaction listing table previously displayed **Trade Date**. A new **Create Date** column has been added as the rightmost column in this table.
+
+- Dealing: Commission Adjustment: The unconfirmed transaction listing table now includes a **TX Type** column. Previously, it was impossible to distinguish different transaction types within the same portfolio and security except by ID. Additionally, the left columns are now sticky, allowing users to scroll horizontally and adjust commission numbers without losing track of the corresponding transactions.
+
+#### **Fixed**
+
+- Consolidated Report: Fixed market value calculations to use settlement amounts and correct FX conversions. Added safe division operations to prevent division-by-zero errors and corrected cash conversion to base currency using proper FX rates.
+
+
 ### v1.26.0 - 2025-10-14
 
 #### **Added**
