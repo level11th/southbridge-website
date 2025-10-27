@@ -5,9 +5,13 @@ next: /docs/changelog
 prev: /docs
 ---
 
-Great! Here is your changelog entry, versioned and dated using the **Keep a Changelog** format:
+### v1.28.0 - 2025-10-27
 
----
+#### **Changed**
+
+-   Investment export: updated ISIN, VAT, and liability row fund code to meet new requirements
+-   Equity page: unified ISIN input into a single field
+-   Liquidity report: updated to meet new requirement
 
 ### v1.27.0 - 2025-10-21
 
