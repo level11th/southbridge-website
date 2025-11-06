@@ -5,6 +5,21 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.29.0 - 2025-11-06
+
+#### Changed
+
+* Market ▸ Exchange Market: changed the Country field to a dropdown.
+* Dealing ▸ Post Allocation; Daily ▸ Post/Close Transaction: added page size control.
+
+#### Fixed
+
+* VaR portfolio/investment colors were previously capped; they now support unlimited items, with colors cycling once the palette is exhausted.
+* Broker Commission showed the wrong creator.
+* Investments: fix same issuer investment able to be found before main one.
+* Broker Commission field lacked validation for large numeric values.
+
+
 ### v1.28.0 - 2025-10-27
 
 #### **Changed**
