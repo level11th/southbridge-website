@@ -5,6 +5,26 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.30.0 - 2025-11-18
+
+#### **Added**
+
+- Enquiry history transactions can now be exported as XLSX.
+
+- FX trades now have a swap BUY/SELL currency button.
+
+#### **Changed**
+
+- Added **CostAmount** and **Price** columns to the commission adjustment Excel export.
+
+- VaR/VaR backtesting now displays a usable-portfolio hint.
+
+#### **Fixed**
+
+- Improved decimal precision in Allocation Excel exports.
+
+- The process EOD page now shows the range of portfolios where holdings are not empty.
+
 ### v1.29.0 - 2025-11-06
 
 #### Changed
