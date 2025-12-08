@@ -5,6 +5,34 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.31.0 - 2025-12-08
+
+#### **Added**
+
+- Dealing: Added Highest NAV allocation settings
+- Investment: Added a History dialog (accessible from the rightmost toolbar dropdown or by Cmd/Ctrl + clicking Undo/Redo) to view actions and perform multi-step undo/redo.
+- Investment: Added a column-wide cancel button to remove all staged orders for a portfolio.
+
+#### **Changed**
+
+- Churning Page: Added error handling to display a message when there is no investment activity in the selected period.
+
+- Investment: Accrued and regular fees before the investment date are now reserved from usable cash in the matrix.
+- Investment: Simulation Details dialog is now accessible by clicking the portfolio code in the matrix header.
+- Investment: Undo/Redo buttons are now disabled when no further actions are available.
+
+#### **Fixed**
+
+- Composite Return Page: Added error handling to clearly inform users when the selected date is earlier than the portfolio creation date, preventing errors during search or export.
+
+- Commission Adjustment Page: Fixed an issue where adding a column caused incorrect Excel parsing due to column shifting.
+
+- Corporate Action: Fixed an issue where generated XE transactions did not convert all warrant units to stock.
+
+- Dealing: allocation size table wrong models / portfolios
+
+
+
 ### v1.30.0 - 2025-11-18
 
 #### **Added**
