@@ -5,6 +5,39 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.32.0 - 2025-12-29
+
+#### **Added**
+
+- Churning: Added the ability to export raw transaction data.
+- Market: Added an "Equity Price Today" checker dialog.
+- Other: Added functionality to map account codes for duplicate portfolios.
+
+#### **Changed**
+
+- Churning: Updated the calculation formula.
+- Churning: Added error handling to display a message when there is no investment activity in the selected period.
+
+- Daily Performance: Removed the "Submit" setting button in the daily performance workflow.
+
+- Investment: Updated the Investment Matrix to include "Other Assets" positions and refined the Simulation Details dialog.
+
+- Monitoring Report: Configured the report to return an empty state instead of an error when no breaches are found.
+
+- System: Rewrote the notification system to improve resilience and include detailed logging for future debugging.
+- System: Updated role permissions.
+
+#### **Fixed**
+
+- Allocation: Fixed an export issue where empty (nil) task dates caused failures.
+
+- Commission Adjustment: Fixed the Excel reader to correctly handle import data.
+
+- Composite: Added validation to trigger an error when the selected date range precedes the portfolio's creation date.
+
+- Investment: Fixed numerical calculation errors in the Simulation Details modal.
+
+
 ### v1.31.0 - 2025-12-08
 
 #### **Added**
@@ -32,7 +65,6 @@ prev: /docs
 - Dealing: allocation size table wrong models / portfolios
 
 
-
 ### v1.30.0 - 2025-11-18
 
 #### **Added**
@@ -52,6 +84,7 @@ prev: /docs
 - Improved decimal precision in Allocation Excel exports.
 
 - The process EOD page now shows the range of portfolios where holdings are not empty.
+
 
 ### v1.29.0 - 2025-11-06
 
