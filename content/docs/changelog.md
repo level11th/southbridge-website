@@ -5,6 +5,32 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.33.0 - 2026-01-14
+
+#### **Added**
+
+- Report: Added a row total for cash in the consolidated report.
+- Investment: Added an option to skip accrued fee simulation.
+
+#### **Changed**
+
+- Cash Report: Highlighted non-zero disburseBuy values in the cash report.
+- Monthly Report: Adjusted wording and decimal places for.
+- Monthly Report: Added line breaks in the portfolio description header.
+- Role: Updated permissions to support view-only access.
+- Investment: Set Investment Matrix column widths to fit staging data by default.
+
+#### **Fixed**
+
+- Investment: Fixed incorrect Simulation Details.
+- Churning: Fixed an issue where the portfolio could be unselected in the Churning (1833) flow.
+- Daily Performance: Fixed benchmark-since-inception settings to apply correctly (1825).
+- Activity Logs: Refactored activity logs to improve correctness and stability.
+- Investment: Fixed the incorrect AddToAll function behavior.
+- UI: Fixed table text rendering on small screens.
+
+
+
 ### v1.32.0 - 2025-12-29
 
 #### **Added**
