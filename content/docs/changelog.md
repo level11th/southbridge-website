@@ -5,6 +5,30 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.34.0 - 2026-02-05
+
+#### **Added**
+
+- Cash In/Out: Added unit prefill for cash in/out transactions.
+- Manage Rule: Added new selector sort logic and leading prefix search for securities when managing rule targets.
+- Dealing: Added unit allocation support in dealing flows.
+- Investment/Dealing: Added support for value-based investment and dealing flows.
+- Investment: Added Cancel Order button for UT investments.
+
+#### **Changed**
+
+- Post Transactions: Updated post-transaction error message to instruct users to check unit allocation.
+- Investment: Set export order default to **Standard** for investment exports.
+- Reports: Updated high-watermark per-unit UI to show 4 decimal digits.
+
+#### **Fixed**
+
+- Reports: Fixed incorrect maturity date displayed in reports.
+- Activity Logs: Fixed error when confirming/unconfirming in Post Allocation activity logs.
+- Daily Performance (MSTH): Fixed Return and SD not updating when switching timeframe mode.
+- Approvals: Fixed issue when clicking Disprove in Pending state.
+
+
 ### v1.33.0 - 2026-01-14
 
 #### **Added**
