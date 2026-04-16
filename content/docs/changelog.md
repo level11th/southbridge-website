@@ -5,6 +5,54 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.35.1 - 2026-04-17
+
+#### **Added**
+
+- Dealing: Added Dealing Manager page to support multi-deal workflows.
+
+
+#### **Changed**
+
+- Global Config: Updated cross-role transaction mutation behavior for public configurations.
+- Daily Post Transaction: Disabled editing for buy/sell transactions in the equity edit modal.
+
+
+#### **Fixed**
+
+- FX Post Transaction: unintentionally shows unconfirmed FX transactions.
+- Daily Performance: Fixed preview button functionality.
+- Cash In/Out: Corrected display of Reference Rate and Effective Date.
+- Portfolio Valuation PDF: Fixed layout issues.
+- Portfolio Export TXT: Corrected column formatting.
+
+
+### v1.35.0 - 2026-03-30
+
+#### **Added**
+
+- Monthly Report: Added logo support in the Port Valuation report for clients.
+- FX Trade: Added support for importing FX trade files in the FX Trade function to automatically create bulk transactions.
+- FX Trade: Added confirmation status = **No**.
+- Portfolio: Added Excel export support.
+- Portfolio: Added TXT export support for DB format.
+- Order Placement: Added Excel export support.
+- Reports: Updated High-Watermark per-unit value to show 4 decimal digits.
+- Unit Trust: Added unit allocation logic for unit trust.
+- Cash In/Out: Added Accrued AR and Reverse Accrued AR transaction types.
+
+#### **Changed**
+
+- Daily: Updated NAV security and fee adjustment UI flow.
+- Investment: Updated untradable unit simulation to use confirmed transactions from the same day.
+- Compliance/Investment: Updated portfolio/security target preview.
+
+#### **Fixed**
+
+- Daily Performance: Fixed composite benchmark since-date calculation.
+- Fixed multiple minor and edge-case issues.
+
+
 ### v1.34.0 - 2026-02-05
 
 #### **Added**
