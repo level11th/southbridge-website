@@ -5,6 +5,26 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.36.0 - 2026-04-29
+
+#### **Added**
+
+- FX Trade: Added pin functionality for FX trades.
+- Lockscreen: Introduced lockscreen feature.
+- Unit Allocation: Refined unit allocation workflow.
+- Market Portfolio Summary: Added market portfolio summary feature.
+- Compliance Statement: Added compliance statement feature.
+
+#### **Changed**
+- FX Trade: Added pin functionality for FX trades.
+
+#### **Fixed**
+
+- Proving System: Corrected active flag handling across dependent components.
+- Dealing & Allocation Size: Prevented application hang during mode switching.
+- Daily Equity: Improved input validation and error messaging in equity forms.
+
+
 ### v1.35.1 - 2026-04-17
 
 #### **Added**
