@@ -5,6 +5,26 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.36.1 - 2026-05-25
+
+#### **Added**
+
+- Compliance: Added portfolio and security target usage rules.
+- Cash Security: Added capability to search by security code or portfolio code.
+
+#### **Changed**
+
+- Permissions: `RolePFAdmin` permission rule adjustment.
+- Investment: Adjusted right transaction options to automatically add real units if end-of-day (EOD) processing was omitted.
+- Export Portfolio: Renamed `liabilityAssets` column value from `ASSETS` to `ASSET`.
+
+#### **Fixed**
+
+- Security Type: Corrected CRUD operations for security types.
+- Investment: Added missing active flag validation when importing orders.
+- FX Trade: Fixed incorrect mapping for `amount from` and `amount to` values.
+
+
 ### v1.36.0 - 2026-04-29
 
 #### **Added**
