@@ -5,6 +5,24 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.36.3 - 2026-06-12
+
+#### **Added**
+
+- Startup: Added splash screen on application startup.
+- Design: Added responsive off-canvas navigation drawer.
+- FX Trade: Added four-eyes principle enforcement for FX trade confirm and unconfirm actions.
+
+#### **Changed**
+
+- Monthly Report: Renamed `Fixed Fee` to `Base Fee`.
+
+#### **Fixed**
+
+- Business Logic: Corrected various business logic issues.
+- Exceptions: Fixed multiple unhandled exception scenarios.
+
+
 ### v1.36.1 - 2026-05-25
 
 #### **Added**
