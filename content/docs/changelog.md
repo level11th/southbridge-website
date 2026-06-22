@@ -5,6 +5,18 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.37.0 - 2026-06-22
+
+#### **Added**
+
+- Role: Added 2 new roles Accounting and Dedicated Fund Manager
+
+#### **Fixed**
+
+- Business Logic: Corrected various business logic issues.
+- Exceptions: Fixed multiple unhandled exception scenarios.
+
+
 ### v1.36.3 - 2026-06-12
 
 #### **Added**
