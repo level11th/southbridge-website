@@ -5,6 +5,20 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.37.1 - 2026-06-26
+
+#### **Changes**
+
+- dealing: prefill limit price in multi-order xlsx export
+- role: rename role pf_admin to pf_dealer
+- Export portfolio: rename liabilityAssets column value from ASSET to ASSETS
+
+#### **Fixed**
+
+- dealing: export order remark instead of empty pre-tx remark
+- Exceptions: Fixed multiple unhandled exception scenarios.
+
+
 ### v1.37.0 - 2026-06-22
 
 #### **Added**
