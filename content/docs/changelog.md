@@ -5,6 +5,19 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.37.2 - 2026-06-29
+
+#### **Changes**
+
+- dealing: Swap Column Positions (ISIN and Security Description) in Allocation Excel Export
+
+#### **Fixed**
+
+- resource: derive fundPortfolioType ASSET in Deutsche Bank export
+- daily: correct cash-in-out import unit display and taxpayer mapping
+- investment: settle FX position cash legs on their settlement date
+
+
 ### v1.37.1 - 2026-06-26
 
 #### **Changes**
