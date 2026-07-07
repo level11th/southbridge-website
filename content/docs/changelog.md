@@ -5,6 +5,21 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.37.3 - 2026-07-08
+
+#### **Changes**
+
+- revoke report permissions from Accounting per access matrix
+- compliance: add VaR weight basis (nav vs invested)
+
+#### **Fixed**
+
+- resource: derive fundPortfolioType ASSET in Deutsche Bank export
+- market: correct price-code pending guard and stuck loading toast
+- masterfile: allow updating issuer IsCompany type
+- report,masterfile: keep error notification alive past finally destroy
+
+
 ### v1.37.2 - 2026-06-29
 
 #### **Changes**
