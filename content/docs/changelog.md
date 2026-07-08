@@ -14,7 +14,6 @@ prev: /docs
 
 #### **Fixed**
 
-- resource: derive fundPortfolioType ASSET in Deutsche Bank export
 - market: correct price-code pending guard and stuck loading toast
 - masterfile: allow updating issuer IsCompany type
 - report,masterfile: keep error notification alive past finally destroy
