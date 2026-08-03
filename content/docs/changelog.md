@@ -5,6 +5,30 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.38.0 - 2026-08-03
+
+#### **Added**
+
+* Reports: Added authorization gating, portfolio ACL scoping, and explicit permission gating for MKET Portfolio Summary exports.
+* Reports: Added Excel download capability for Withholding Tax summary.
+* Navigation: Added automatic disabling of Help links for pages the user cannot access.
+* Enquiry: Added split layout options for History Transaction exports and included ISIN codes for Thai stocks in MSTH exports.
+* FX Operations: Added Excel export support for FX Position data.
+* Dealing: Added Excel export capability for selected Post Allocation transactions and enabled export name mapping for security codes in MSTH exports.
+
+#### **Changed**
+
+* Masterfile: Consolidated equity export ISIN columns into a single unified column.
+
+#### **Fixed**
+
+* Market Service: Enforced upper-case formatting for price codes in the service layer.
+* Authentication & UI: Fixed role badge overflow in the sidebar menu and updated LDAP notifications to inform users their password is managed externally.
+* Enquiry: Fixed counterparty selection for DB FX broker codes and corrected DB investment security ID keying by exchange country.
+* Compliance: Fixed field labels, placeholders, and log messages for `DeleteSecurityTarget`.
+* Compliance: Redesigned Performance Nav search form layout and made the rest of Compliance ▸ Performance fully responsive.
+
+
 ### v1.37.3 - 2026-07-08
 
 #### **Changes**
