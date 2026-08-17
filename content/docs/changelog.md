@@ -5,6 +5,28 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.38.1 - 2026-08-13
+
+#### **Changed**
+
+* Dealing: Reordered MSTH commission adjustment columns and added Side and Price fields.
+* Dealing: Updated "Unconfirm Selected" button color to red.
+
+#### **Fixed**
+
+* FX Operations: Removed unusable Delete action from Post Transaction.
+* Daily Operations: Scoped Equity Price Adjustment edit to the clicked row.
+* Reports: Returned `ErrExchangeRateNotFound` instead of triggering a panic in PF1000 report.
+* Reports: Used `THB_CURRENCY_ID` in monthly2 and statement reports.
+* Masterfile: Fetched bank list for all interest-rate modal actions.
+* Masterfile: Cleared portfolios on FX mapping currency change.
+* Enquiry: Ensured unique `rowKey` for cash holding AI tree rows.
+* Reports: Ensured unique `rowKey` for cash AI report tree rows.
+* Reports: Scoped main cash account join to the security's own portfolio.
+* Dealing: Cleared commission adjustment sheet only on successful update.
+* Reports: Corrected MSTH monthly THB table rendering and YTD performance fallback.
+
+
 ### v1.38.0 - 2026-08-03
 
 #### **Added**
