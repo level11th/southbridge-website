@@ -5,6 +5,21 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.39.0 - 2026-09-01
+
+#### **Added**
+
+* Reports: Added toggle for benchmark index rows in Daily Performance.
+* Reports: Added edit permission gating for Daily Performance bulk toggle buttons.
+* Reports: Added Excel export capability for Monthly Reports.
+* Dealing: Added new Transfer page.
+
+#### **Fixed**
+
+* Reports: Fixed monthly PDF page breaks and footer overlap.
+* Resolved various minor bugs.
+
+
 ### v1.38.1 - 2026-08-13
 
 #### **Changed**
