@@ -5,6 +5,20 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.40.0 - 2026-09-07
+
+#### **Added**
+
+* Reports: Added support for MSTH Trial Balance (TB) format and template downloads.
+* Daily: Added per-portfolio concatenated text files to GL export ZIP archives.
+* Orders: Added partial approval support for orders triggering breached approval rules.
+
+#### **Changed**
+
+* System Management: Moved MKET export module under `sysmgmt.integration.mket`.
+* Daily: Reworked end-of-day process to support many portfolio batches.
+
+
 ### v1.39.0 - 2026-09-01
 
 #### **Added**
