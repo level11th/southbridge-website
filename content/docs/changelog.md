@@ -5,6 +5,24 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.40.1 - 2026-10-01
+
+#### **Changed**
+
+* Daily: Monthly PDF with compound benchmark calculation.
+* Daily: Aligned Adjust Available Unit page with Adjust NAV of security page.
+* Navigation & UI: Add fuzzy search with match highlighting to the sidebar menu.
+* Frontend Architecture: Reworked the ResourceTransfer component and implemented it across the entire app.
+* FX: Rework Trade excel import.
+
+#### **Fixed**
+
+* Reports: Fix monthly PDF page breaks, footer clipping, blank page rendering.
+* Dealing & Cash: Prevent adjustment commission values from being lost when refocusing pages, and validate form inputs prior to confirmed submissions.
+* Investment: order management NAV label uses local currency
+* Resolved various minor bugs.
+
+
 ### v1.40.0 - 2026-09-07
 
 #### **Added**
