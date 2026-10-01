@@ -4,7 +4,7 @@ title: Compose
 weight: 3
 ---
 
-You can use Docker Compose to define deployment specifications instead of using docker run. This method is recommended. Below are some examples:
+You can use Docker Compose to define deployment specifications instead of using `docker run`. This method is recommended. Below are some examples:
 
 ### Application
 `app.yaml`
@@ -15,8 +15,8 @@ services:
     image: chromedp/headless-shell:latest
     container_name: chromium
     restart: always
-    shm_size: 2G # increase if not enough
-    init: true # prevent zombie processes
+    shm_size: 2G # Increase if more shared memory is needed.
+    init: true # Prevent zombie processes.
 
   app:
     image: path-to-image:${IMAGE_TAG}
@@ -44,7 +44,7 @@ services:
     container_name: pg
     restart: unless-stopped
     command: postgres -c max_connections=100
-    shm_size: 512mb # increase if not enough
+    shm_size: 512mb # Increase if more shared memory is needed.
     env_file:
       - secret.env
     ports:
@@ -64,8 +64,8 @@ services:
     env_file:
       - secret.env
     environment:
-      - PGADMIN_CONFIG_WTF_CSRF_ENABLED=False # fix csrf token invalid when behind load balancer
-      - PGADMIN_CONFIG_WTF_CSRF_SSL_STRICT=False # fix csrf token invalid when behind load balancer
+      - PGADMIN_CONFIG_WTF_CSRF_ENABLED=False # Address invalid CSRF tokens when behind a load balancer.
+      - PGADMIN_CONFIG_WTF_CSRF_SSL_STRICT=False # Address invalid CSRF tokens when behind a load balancer.
     ports:
       - "5050:80"
     volumes:

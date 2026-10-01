@@ -5,9 +5,9 @@ weight: 5
 
 ### Essential Global Configuration
 
-The essential configurations that apply to the global system can be managed under the menu: `System Management` -> `App Configuration`.
+Manage essential system-wide settings under `System Management` -> `App Configuration`.
 
-**Note**: Restart is not required after making changes.
+**Note:** A restart is not required after making changes.
 
 #### **Company Configuration**
 
@@ -37,7 +37,7 @@ The essential configurations that apply to the global system can be managed unde
 #### **Security Configuration**
 
 -   **`RESET_PASSWORD_TOKEN_EXPIRES_DURATION`**: number  
-    Sets the expiration duration (in days) for reset password tokens.
+    Sets the expiration duration (in days) for password reset tokens.
 
 -   **`MAX_SAME_PASSWORD_COUNT`**: number  
     Specifies the maximum number of recent identical passwords allowed when setting a new password within a year.
@@ -69,7 +69,7 @@ The essential configurations that apply to the global system can be managed unde
     Specifies the system's default currency ID.
 
 -   **`THB_CURRENCY_ID`**: number  
-    Specifies Thai Baht currency ID.
+    Specifies the Thai baht currency ID.
 
 --- 
 

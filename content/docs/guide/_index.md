@@ -7,7 +7,7 @@ sidebar:
   open: true
 ---
 
-Explore the following sections to learn how to setup Southbridge:
+Explore the following sections to learn how to set up Southbridge:
 
 <!--more-->
 

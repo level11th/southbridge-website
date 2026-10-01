@@ -9,17 +9,17 @@ prev: /docs
 
 #### **Changed**
 
-* Daily: Monthly PDF with compound benchmark calculation.
-* Daily: Aligned Adjust Available Unit page with Adjust NAV of security page.
-* Navigation & UI: Add fuzzy search with match highlighting to the sidebar menu.
+* Daily: Updated the monthly PDF to use compound benchmark calculations.
+* Daily: Aligned the Adjust Available Unit page with the Adjust NAV of Security page.
+* Navigation & UI: Added fuzzy search with match highlighting to the sidebar menu.
 * Frontend Architecture: Reworked the ResourceTransfer component and implemented it across the entire app.
-* FX: Rework Trade excel import.
+* FX: Reworked the Trade Excel import.
 
 #### **Fixed**
 
-* Reports: Fix monthly PDF page breaks, footer clipping, blank page rendering.
-* Dealing & Cash: Prevent adjustment commission values from being lost when refocusing pages, and validate form inputs prior to confirmed submissions.
-* Investment: order management NAV label uses local currency
+* Reports: Fixed monthly PDF page breaks, footer clipping, and blank page rendering.
+* Dealing & Cash: Prevented commission adjustment values from being lost when refocusing pages and added form input validation before confirming submissions.
+* Investment: Updated the order management NAV label to use the local currency.
 * Resolved various minor bugs.
 
 
@@ -41,10 +41,10 @@ prev: /docs
 
 #### **Added**
 
-* Reports: Added toggle for benchmark index rows in Daily Performance.
+* Reports: Added a toggle for benchmark index rows in Daily Performance.
 * Reports: Added edit permission gating for Daily Performance bulk toggle buttons.
 * Reports: Added Excel export capability for Monthly Reports.
-* Dealing: Added new Transfer page.
+* Dealing: Added a new Transfer page.
 
 #### **Fixed**
 
@@ -57,20 +57,20 @@ prev: /docs
 #### **Changed**
 
 * Dealing: Reordered MSTH commission adjustment columns and added Side and Price fields.
-* Dealing: Updated "Unconfirm Selected" button color to red.
+* Dealing: Updated the "Unconfirm Selected" button color to red.
 
 #### **Fixed**
 
-* FX Operations: Removed unusable Delete action from Post Transaction.
-* Daily Operations: Scoped Equity Price Adjustment edit to the clicked row.
-* Reports: Returned `ErrExchangeRateNotFound` instead of triggering a panic in PF1000 report.
+* FX Operations: Removed the unusable Delete action from Post Transaction.
+* Daily Operations: Scoped Equity Price Adjustment edits to the clicked row.
+* Reports: Returned `ErrExchangeRateNotFound` instead of triggering a panic in the PF1000 report.
 * Reports: Used `THB_CURRENCY_ID` in monthly2 and statement reports.
-* Masterfile: Fetched bank list for all interest-rate modal actions.
+* Masterfile: Fetched the bank list for all interest-rate modal actions.
 * Masterfile: Cleared portfolios on FX mapping currency change.
-* Enquiry: Ensured unique `rowKey` for cash holding AI tree rows.
-* Reports: Ensured unique `rowKey` for cash AI report tree rows.
-* Reports: Scoped main cash account join to the security's own portfolio.
-* Dealing: Cleared commission adjustment sheet only on successful update.
+* Enquiry: Ensured a unique `rowKey` for cash holding AI tree rows.
+* Reports: Ensured a unique `rowKey` for cash AI report tree rows.
+* Reports: Scoped the main cash account join to the security's own portfolio.
+* Dealing: Cleared the commission adjustment sheet only after a successful update.
 * Reports: Corrected MSTH monthly THB table rendering and YTD performance fallback.
 
 
@@ -91,51 +91,51 @@ prev: /docs
 
 #### **Fixed**
 
-* Market Service: Enforced upper-case formatting for price codes in the service layer.
-* Authentication & UI: Fixed role badge overflow in the sidebar menu and updated LDAP notifications to inform users their password is managed externally.
+* Market Service: Enforced uppercase formatting for price codes in the service layer.
+* Authentication & UI: Fixed role badge overflow in the sidebar menu and updated LDAP notifications to inform users that their passwords are managed externally.
 * Enquiry: Fixed counterparty selection for DB FX broker codes and corrected DB investment security ID keying by exchange country.
 * Compliance: Fixed field labels, placeholders, and log messages for `DeleteSecurityTarget`.
-* Compliance: Redesigned Performance Nav search form layout and made the rest of Compliance ▸ Performance fully responsive.
+* Compliance: Redesigned the Performance Nav search form layout and made the rest of Compliance ▸ Performance fully responsive.
 
 
 ### v1.37.3 - 2026-07-08
 
-#### **Changes**
+#### **Changed**
 
-- revoke report permissions from Accounting per access matrix
-- compliance: add VaR weight basis (nav vs invested)
+- Revoked report permissions from Accounting according to the access matrix.
+- Compliance: Added a VaR weight basis (NAV vs. invested).
 
 #### **Fixed**
 
-- market: correct price-code pending guard and stuck loading toast
-- masterfile: allow updating issuer IsCompany type
-- report,masterfile: keep error notification alive past finally destroy
+- Market: Corrected the price-code pending guard and fixed a loading notification that remained visible.
+- Masterfile: Allowed updates to the issuer IsCompany type.
+- Reports & Masterfile: Kept error notifications visible after final cleanup.
 
 
 ### v1.37.2 - 2026-06-29
 
-#### **Changes**
+#### **Changed**
 
-- dealing: Swap Column Positions (ISIN and Security Description) in Allocation Excel Export
+- Dealing: Swapped the ISIN and Security Description column positions in the Allocation Excel export.
 
 #### **Fixed**
 
-- resource: derive fundPortfolioType ASSET in Deutsche Bank export
-- daily: correct cash-in-out import unit display and taxpayer mapping
-- investment: settle FX position cash legs on their settlement date
+- Resource: Derived the `fundPortfolioType` value `ASSET` in the Deutsche Bank export.
+- Daily: Corrected the unit display and taxpayer mapping in Cash In/Out imports.
+- Investment: Settled FX position cash legs on their settlement date.
 
 
 ### v1.37.1 - 2026-06-26
 
-#### **Changes**
+#### **Changed**
 
-- dealing: prefill limit price in multi-order xlsx export
-- role: rename role pf_admin to pf_dealer
-- Export portfolio: rename liabilityAssets column value from ASSET to ASSETS
+- Dealing: Prefilled the limit price in the multi-order XLSX export.
+- Role: Renamed the `pf_admin` role to `pf_dealer`.
+- Export Portfolio: Renamed the `liabilityAssets` column value from `ASSET` to `ASSETS`.
 
 #### **Fixed**
 
-- dealing: export order remark instead of empty pre-tx remark
+- Dealing: Exported the order remark instead of the empty pre-transaction remark.
 - Exceptions: Fixed multiple unhandled exception scenarios.
 
 
@@ -143,7 +143,7 @@ prev: /docs
 
 #### **Added**
 
-- Role: Added 2 new roles Accounting and Dedicated Fund Manager
+- Role: Added two new roles: Accounting and Dedicated Fund Manager.
 
 #### **Fixed**
 
@@ -155,8 +155,8 @@ prev: /docs
 
 #### **Added**
 
-- Startup: Added splash screen on application startup.
-- Design: Added responsive off-canvas navigation drawer.
+- Startup: Added a splash screen on application startup.
+- Design: Added a responsive off-canvas navigation drawer.
 - FX Trade: Added four-eyes principle enforcement for FX trade confirm and unconfirm actions.
 
 #### **Changed**
@@ -178,7 +178,7 @@ prev: /docs
 
 #### **Changed**
 
-- Permissions: `RolePFAdmin` permission rule adjustment.
+- Permissions: Adjusted the `RolePFAdmin` permission rule.
 - Investment: Adjusted right transaction options to automatically add real units if end-of-day (EOD) processing was omitted.
 - Export Portfolio: Renamed `liabilityAssets` column value from `ASSETS` to `ASSET`.
 
@@ -194,10 +194,10 @@ prev: /docs
 #### **Added**
 
 - FX Trade: Added pin functionality for FX trades.
-- Lockscreen: Introduced lockscreen feature.
+- Lockscreen: Introduced a lockscreen feature.
 - Unit Allocation: Refined unit allocation workflow.
-- Market Portfolio Summary: Added market portfolio summary feature.
-- Compliance Statement: Added compliance statement feature.
+- Market Portfolio Summary: Added a market portfolio summary feature.
+- Compliance Statement: Added a compliance statement feature.
 
 #### **Changed**
 - FX Trade: Added pin functionality for FX trades.
@@ -205,7 +205,7 @@ prev: /docs
 #### **Fixed**
 
 - Proving System: Corrected active flag handling across dependent components.
-- Dealing & Allocation Size: Prevented application hang during mode switching.
+- Dealing & Allocation Size: Prevented the application from hanging during mode switching.
 - Daily Equity: Improved input validation and error messaging in equity forms.
 
 
@@ -213,7 +213,7 @@ prev: /docs
 
 #### **Added**
 
-- Dealing: Added Dealing Manager page to support multi-deal workflows.
+- Dealing: Added a Dealing Manager page to support multi-deal workflows.
 
 
 #### **Changed**
@@ -224,7 +224,7 @@ prev: /docs
 
 #### **Fixed**
 
-- FX Post Transaction: unintentionally shows unconfirmed FX transactions.
+- FX Post Transaction: Fixed the unintended display of unconfirmed FX transactions.
 - Daily Performance: Fixed preview button functionality.
 - Cash In/Out: Corrected display of Reference Rate and Effective Date.
 - Portfolio Valuation PDF: Fixed layout issues.
@@ -241,7 +241,7 @@ prev: /docs
 - Portfolio: Added Excel export support.
 - Portfolio: Added TXT export support for DB format.
 - Order Placement: Added Excel export support.
-- Reports: Updated High-Watermark per-unit value to show 4 decimal digits.
+- Reports: Updated High-Watermark per-unit value to show 4 decimal places.
 - Unit Trust: Added unit allocation logic for unit trust.
 - Cash In/Out: Added Accrued AR and Reverse Accrued AR transaction types.
 
@@ -269,16 +269,16 @@ prev: /docs
 
 #### **Changed**
 
-- Post Transactions: Updated post-transaction error message to instruct users to check unit allocation.
-- Investment: Set export order default to **Standard** for investment exports.
-- Reports: Updated high-watermark per-unit UI to show 4 decimal digits.
+- Post Transactions: Updated the post-transaction error message to instruct users to check unit allocation.
+- Investment: Set the export order default to **Standard** for investment exports.
+- Reports: Updated high-watermark per-unit UI to show 4 decimal places.
 
 #### **Fixed**
 
 - Reports: Fixed incorrect maturity date displayed in reports.
-- Activity Logs: Fixed error when confirming/unconfirming in Post Allocation activity logs.
-- Daily Performance (MSTH): Fixed Return and SD not updating when switching timeframe mode.
-- Approvals: Fixed issue when clicking Disprove in Pending state.
+- Activity Logs: Fixed an error when confirming/unconfirming in Post Allocation activity logs.
+- Daily Performance (MSTH): Fixed an issue where Return and SD did not update when switching time frame modes.
+- Approvals: Fixed an issue when clicking Disprove in the Pending state.
 
 
 ### v1.33.0 - 2026-01-14
@@ -291,7 +291,7 @@ prev: /docs
 #### **Changed**
 
 - Cash Report: Highlighted non-zero disburseBuy values in the cash report.
-- Monthly Report: Adjusted wording and decimal places for.
+- Monthly Report: Adjusted wording and decimal places.
 - Monthly Report: Added line breaks in the portfolio description header.
 - Role: Updated permissions to support view-only access.
 - Investment: Set Investment Matrix column widths to fit staging data by default.
@@ -344,7 +344,7 @@ prev: /docs
 
 #### **Added**
 
-- Dealing: Added Highest NAV allocation settings
+- Dealing: Added Highest NAV allocation settings.
 - Investment: Added a History dialog (accessible from the rightmost toolbar dropdown or by Cmd/Ctrl + clicking Undo/Redo) to view actions and perform multi-step undo/redo.
 - Investment: Added a column-wide cancel button to remove all staged orders for a portfolio.
 
@@ -353,7 +353,7 @@ prev: /docs
 - Churning Page: Added error handling to display a message when there is no investment activity in the selected period.
 
 - Investment: Accrued and regular fees before the investment date are now reserved from usable cash in the matrix.
-- Investment: Simulation Details dialog is now accessible by clicking the portfolio code in the matrix header.
+- Investment: The Simulation Details dialog is now accessible by clicking the portfolio code in the matrix header.
 - Investment: Undo/Redo buttons are now disabled when no further actions are available.
 
 #### **Fixed**
@@ -364,7 +364,7 @@ prev: /docs
 
 - Corporate Action: Fixed an issue where generated XE transactions did not convert all warrant units to stock.
 
-- Dealing: allocation size table wrong models / portfolios
+- Dealing: Corrected the models and portfolios displayed in the allocation size table.
 
 
 ### v1.30.0 - 2025-11-18
@@ -385,21 +385,21 @@ prev: /docs
 
 - Improved decimal precision in Allocation Excel exports.
 
-- The process EOD page now shows the range of portfolios where holdings are not empty.
+- The Process EOD page now shows the range of portfolios where holdings are not empty.
 
 
 ### v1.29.0 - 2025-11-06
 
 #### Changed
 
-* Market ▸ Exchange Market: changed the Country field to a dropdown.
-* Dealing ▸ Post Allocation; Daily ▸ Post/Close Transaction: added page size control.
+* Market ▸ Exchange Market: Changed the Country field to a dropdown.
+* Dealing ▸ Post Allocation; Daily ▸ Post/Close Transaction: Added a page size control.
 
 #### Fixed
 
 * VaR portfolio/investment colors were previously capped; they now support unlimited items, with colors cycling once the palette is exhausted.
 * Broker Commission showed the wrong creator.
-* Investments: fix same issuer investment able to be found before main one.
+* Investments: Fixed an issue where an investment from the same issuer could be found before the main investment.
 * Broker Commission field lacked validation for large numeric values.
 
 
@@ -407,15 +407,15 @@ prev: /docs
 
 #### **Changed**
 
--   Investment export: updated ISIN, VAT, and liability row fund code to meet new requirements
--   Equity page: unified ISIN input into a single field
--   Liquidity report: updated to meet new requirement
+-   Investment Export: Updated ISIN, VAT, and the liability row fund code to meet new requirements.
+-   Equity: Unified ISIN input into a single field.
+-   Liquidity Report: Updated the report to meet new requirements.
 
 ### v1.27.0 - 2025-10-21
 
 #### **Changed**
 
-- Dealing: Commission Adjustment: Added an option to query unconfirmed transactions by **Trade Date** instead of previously using **Create Date**. The earlier version incorrectly labeled the date range as “Trade Date,” which has now been corrected to “Create Date.”
+- Dealing: Commission Adjustment: Added an option to query unconfirmed transactions by **Trade Date** instead of **Create Date**. The earlier version incorrectly labeled the date range as “Trade Date,” which has now been corrected to “Create Date.”.
 
 - Dealing: Commission Adjustment: The unconfirmed transaction listing table previously displayed **Trade Date**. A new **Create Date** column has been added as the rightmost column in this table.
 
@@ -430,11 +430,11 @@ prev: /docs
 
 #### **Added**
 
--   Allocation export for MSTH.
+-   Added an allocation export for MSTH.
 
 #### **Changed**
 
--   Investment Matrix: The cells in the Value Perspective view are now interactable, allowing investments to be made in terms of value instead of only percentage or units as previously available.
+-   Investment Matrix: The cells in the Value Perspective view are now interactive, allowing investments to be made in terms of value as well as percentages or units.
 
 #### **Fixed**
 
@@ -451,7 +451,7 @@ prev: /docs
 
 #### **Changed**
 
--   Updated investment module to allow investments without an account cash balance.
+-   Updated the investment module to allow investments without an account cash balance.
 
 #### **Fixed**
 
@@ -463,56 +463,56 @@ prev: /docs
 
 #### **Added**
 
--   Compliance: VaR price filler
+-   Compliance: Added a VaR price filler.
 
 #### **Changed**
 
--   New fee type: "Fund Administration Fee"
--   Gain/Loss report: added percentage column
+-   Added a new fee type: "Fund Administration Fee".
+-   Gain/Loss Report: Added a percentage column.
 
 #### **Fixed**
 
--   Monthly: failed to upload when the portfolio code was the same as a deleted one
--   Log: missing activity log when performing resource preset CRUD
--   Daily Performance: internal error when the portfolio had no returns since the start date
--   Portfolio performance policy could not be removed in some cases
--   Missing timestamp when creating fee transaction
+-   Monthly: Fixed upload failures when the portfolio code matched that of a deleted portfolio.
+-   Log: Added missing activity logs for resource preset CRUD operations.
+-   Daily Performance: Fixed an internal error when the portfolio had no returns since the start date.
+-   Fixed an issue where a portfolio performance policy could not be removed in some cases.
+-   Added the missing timestamp when creating a fee transaction.
 
 ### v1.23.0 - 2025-09-15
 
 #### **Added**
 
--   Compliance: reimplemented VaR and VaR Backtesting.
--   Exchange Country Concentration rules.
--   Assumption preset option in Stress Test.
+-   Compliance: Reimplemented VaR and VaR Backtesting.
+-   Added Exchange Country Concentration rules.
+-   Added an assumption preset option in Stress Test.
 
 #### **Changed**
 
--   Pop-up wording when generating XD.
--   Dealing: unit cost precision is now fixed to 6 regardless of price scale.
--   Daily Performance: now possible to select by portfolios.
+-   Updated pop-up wording when generating XD.
+-   Dealing: Unit cost precision is now fixed at 6 decimal places regardless of the price scale.
+-   Daily Performance: Added the ability to select by portfolio.
 
 #### **Fixed**
 
--   Dealing: fixed order listing failure when approval rule exists.
--   Dealing: added dedicated error if main cash account for creating TX is not found.
--   Compliance rule inversion issue.
--   Missing activity log when updating Corporate Actions.
+-   Dealing: Fixed an order listing failure when an approval rule exists.
+-   Dealing: Added a dedicated error if the main cash account for creating a transaction is not found.
+-   Fixed a compliance rule inversion issue.
+-   Added the missing activity log when updating Corporate Actions.
 
 ### v1.22.0 - 2025-08-18
 
 #### **Added**
 
--   Dealing > Commission Adjustment: Improved Filters and Export
+-   Dealing > Commission Adjustment: Improved filters and exports.
 
 #### **Changed**
 
--   Investment > Investment Model: Enhanced Investment Model Listing Table
+-   Investment > Investment Model: Enhanced the Investment Model listing table.
 
 #### **Fixed**
 
--   Regression issue with Equity, FX, and benchmark index import malfunction
--   SQL parameter limit error in report monitoring when handling many items
+-   Fixed a regression affecting Equity, FX, and benchmark index imports.
+-   Fixed a SQL parameter limit error in report monitoring when handling many items.
 
 
 ### v1.21.0 - 2025-08-15
@@ -525,24 +525,24 @@ prev: /docs
 
 #### **Changed**
 
--   Performance Group & Portfolio Benchmark Index: improved preview and edit modal.
--   Export Investment Orders can now export as type Default and Standard.
+-   Performance Group & Portfolio Benchmark Index: Improved the preview and edit modal.
+-   Export Investment Orders can now export using the Default and Standard types.
 -   Redesigned the report instruction page flow to make it clearer.
 
 #### **Fixed**
 
--   Missing Report Instruction Signer setup in App Config.
--   Incorrect behavior in report instruction page.
--   Incorrect Excel floating-point warning when uploading on FX, Equity, and Benchmark Index pages.
+-   Added the missing Report Instruction Signer setup in App Config.
+-   Corrected behavior on the report instruction page.
+-   Fixed an incorrect Excel floating-point warning when uploading on FX, Equity, and Benchmark Index pages.
 
 
 ### v1.20.1 - 2025-08-12
 
 #### **Fixed**
-- Hide column when selecting PF1000 report.
-- Unable to create PF1000 report mapping in some cases (incorrect unique SQL constraint).
-- Missing FX security type filter in BOT report.
-- Performance: removed excess data when no skip days; incorrect 'since' date.
+- Hid the column when selecting the PF1000 report.
+- Fixed an issue preventing PF1000 report mapping creation in some cases due to an incorrect unique SQL constraint.
+- Added the missing FX security type filter in the BOT report.
+- Performance: Removed excess data when there were no skip days and corrected the 'since' date.
 
 ### v1.20.0 - 2025-07-25
 
@@ -558,8 +558,8 @@ prev: /docs
 #### **Fixed**
 
 -   PF1000 adjusted value now correctly resets after changing the date.
--   Fixed issue preventing deletion of split and increase transactions in post allocation.
--   Corrected bugs in fund performance: editing time frames and monthly remark text now works as expected.
+-   Fixed an issue preventing deletion of split and increase transactions in post allocation.
+-   Corrected bugs in fund performance: editing time frames and monthly remark text now work as expected.
 
 ### v1.19.0 - 2025-07-09
 #### **Changed**
@@ -593,215 +593,215 @@ prev: /docs
 
 ### v1.18.0
 - Features
-  - Market: be able to select price source when import eq, fx price
-  - Compliance: Stress test excel will use formula to calculate Cost Per unit, % NAV
-  - Performance: show standard deviation in daily performance report and monthly report
-  - Monthly: add option to toggle how High-Water Mark per unit, NAV Performance, Fund Financial Report (Revenue, Expense)
+  - Market: Added price source selection when importing equity and FX prices.
+  - Compliance: The Stress Test Excel export now uses formulas to calculate Cost Per Unit and % NAV.
+  - Performance: Added standard deviation to daily performance and monthly reports.
+  - Monthly: Added options to toggle the display of High-Water Mark per Unit, NAV Performance, and Fund Financial Report (Revenue, Expense).
 
 - Fixes
-  - EOD process don't error when user forget to set main cash account
+  - Corrected EOD error handling when the user forgets to set the main cash account.
 
 ### v1.17.0
 - Features
-  - Report: Support for HWM value per unit
-  - Portfolio: Updated export fund to match new requirements
-  - Compliance : New left operand "Tradable Units"
-  - Compliance : New left operand "Equity Value (in Local Currency)"
-  - Investment : Lot Size display automatically changes to overriding value when user attempt to sell all units (Percentage Perspective: Set to 0%, Unit Perspective: Set to 0 units)
-  - Dealing : Investment date is visible above Trade Date input box. Trade Date input box displays warning if user changes it from the Investment Date with explanation of the possible consequences.
-  - Investment : Import Orders feature now dynamically determine the lot size of imported orders based on input XLSX. (e.g. Change from 100 to 1 automatically if the cell contains odd-lot units.) Added a result modal showing the details of your imports, including the lot size that was decided from your input.
-  - Reworked application background workers
-  - New HTML error page when previewing daily performance and monthly reports
+  - Report: Added support for the HWM value per unit.
+  - Portfolio: Updated the fund export to match new requirements.
+  - Compliance: Added a new left operand: "Tradable Units".
+  - Compliance: Added a new left operand: "Equity Value (in Local Currency)".
+  - Investment: The Lot Size display automatically changes to the override value when the user attempts to sell all units (Percentage Perspective: Set to 0%, Unit Perspective: Set to 0 units).
+  - Dealing: The investment date is visible above the Trade Date input box. The input box displays a warning explaining the possible consequences if the user changes the date to differ from the Investment Date.
+  - Investment: The Import Orders feature now dynamically determines the lot size of imported orders based on the input XLSX file (e.g., changing from 100 to 1 automatically if the cell contains odd-lot units). Added a result modal showing the details of your imports, including the lot size determined from your input.
+  - Reworked application background workers.
+  - Added a new HTML error page when previewing daily performance and monthly reports.
 
 - Fixes
-  - Investment / Compliance : If user just edited Portfolio Model, rule evaluation was mistakenly using the pre-edit Portfolio Model members in the calculation.
-  - Investment : Fix Country with Cash Concentration view not grouping currency found in the Portfolio Model but not in any Portfolio in the correct country.
-  - Investment / Compliance : Fix "Aggregated unit sold/bought in a day" left operand that was not summing up the check per each portfolio.
-  - Investment : Fix wrong concentration calculation in investment simulation after selling.
-  - Investment : Fix investment matrix data gathering on load sometimes missing needed data, causing front-end error.
-  - FX: Set wrong base currency when updating FX transaction
-  - FX: How FX pos blottering (position) works underlying to support more new transaction types
-  - Daily: Import Cash IO TX validation failed when there is no fee code
-  - Enquiry: Export investment commission
-  - Edge case where multiple workers try to acquire portfolio tasks
-  - Slow EOD performance
-  - Minor missing validations when creating/updating resources
-  - Minor bugs
+  - Investment / Compliance: Fixed an issue where rule evaluation used the previous Portfolio Model members in calculations immediately after the user edited the model.
+  - Investment: Fixed the Country with Cash Concentration view to group currencies under the correct country when they are present in the Portfolio Model but absent from its portfolios.
+  - Investment / Compliance: Fixed the "Aggregated unit sold/bought in a day" left operand to sum values for each portfolio.
+  - Investment: Fixed an incorrect concentration calculation in investment simulation after selling.
+  - Investment: Fixed an issue where the investment matrix sometimes failed to load required data, causing a frontend error.
+  - FX: Fixed an incorrect base currency assignment when updating an FX transaction.
+  - FX: Updated the underlying FX position blottering logic to support additional transaction types.
+  - Daily: Fixed Cash IO transaction import validation failures when no fee code is present.
+  - Enquiry: Corrected the investment commission export.
+  - Handled an edge case where multiple workers tried to acquire portfolio tasks.
+  - Improved slow EOD performance.
+  - Added missing validations when creating or updating resources.
+  - Fixed minor bugs.
 
 ### v1.16.0
 - Features
-  - monthly report: remove fund financial section
-  - be able to export portfolio information (Fund) to custodian
-  - refine consolidate report
+  - Monthly Report: Removed the fund financial section.
+  - Added the ability to export portfolio information (Fund) to the custodian.
+  - Refined the consolidated report.
 - Fixes
-  - export Investment BIC_CODE,  Narrative Line1
+  - Corrected BIC_CODE and Narrative Line1 in the Investment export.
 
 ### v1.15.0
 - Features
-  - Consolidated report (POC)
-  - Investment: When attempting to sell all units by using Set mode and typed in 0% or 0 Units, Lot Size information on the bottom right of the popup shows that automatic lot size adjustment to 1 is going to occur.
-  - Dealing > Allocation : Investment Date of the Investment that creates the order of that allocation is now visible above Trade Date input form.
-  - Dealing > Allocation : Changing Trade Date will display a modal explaining possible consequences to the investment simulation in the Investment module.
+  - Added a consolidated report (POC).
+  - Investment: When selling all units by entering 0% or 0 Units in Set mode, the Lot Size information at the bottom right of the pop-up shows that the lot size will automatically adjust to 1.
+  - Dealing > Allocation: The Investment Date of the investment that created the allocation order is now visible above the Trade Date input field.
+  - Dealing > Allocation: Changing the Trade Date displays a modal explaining the possible consequences for the investment simulation in the Investment module.
 
 - Fixes
   - Corrected the Main Cash Account query filter in edge cases.
-  - Handle null value of FX input amount.
-  - Investment : Correctly use lot size of 1 instead of 0 when attempting to sell every units (Set mode, inputting 0 % / 0 Units)
-  - (Investment / Compliance) a bug where "Aggregated Equity Units Bought/Sold in a Day Per Portfolio" rule left operand was aggregating system-wide instead of per portfolio.
+  - Handled null values for the FX input amount.
+  - Investment: Corrected the lot size to 1 instead of 0 when selling all units (entering 0% or 0 Units in Set mode).
+  - (Investment / Compliance) Fixed a bug where the "Aggregated Equity Units Bought/Sold in a Day Per Portfolio" rule left operand was aggregating system-wide instead of per portfolio.
 
 ### v1.14.0
 - Features
-  - Removed sector number
-  - Closed portfolio toggle in resource portfolio
-  - Compliance rule approval
-  - Sector/Country concentration
-  - Country with Cash concentration
-  - Change Company's country to drop down
-  - Investment Matrix : Concentration View accessible from button to the right of Security column.
-  - Investment Matrix : Issue severity dots can appear on Concentration View button, signifying issues related to one of the cells that is only visible inside a Concentration View.
-  - Investment Matrix : Units and Value perspective : Currency code displayed on each applicable cells.
-  - Investment Matrix : Units and Value perspective : "Local" checkbox appears to the right of perspective selector. Checking it converts all cash and value cells to portfolio's local currency. The currency code in each cell changes to show what was the currency and the new converted currency.
-  - Investment Matrix : Issue listing table : Improved Cause column with coloring based on the type of cause.
-  - Compliance > Investment Issue > Issue listing table : Improved Cause column with coloring based on the type of cause.
+  - Removed the sector number.
+  - Added a closed portfolio toggle in Resource Portfolio.
+  - Added compliance rule approval.
+  - Added Sector/Country concentration.
+  - Added Country with Cash concentration.
+  - Changed the Company's country field to a dropdown.
+  - Investment Matrix: The Concentration View is accessible from the button to the right of the Security column.
+  - Investment Matrix: Issue severity dots can appear on the Concentration View button, indicating issues with cells that are only visible inside a Concentration View.
+  - Investment Matrix: Units and Value perspective: Currency codes are displayed in each applicable cell.
+  - Investment Matrix: Units and Value perspective: The "Local" checkbox appears to the right of the perspective selector. Checking it converts all cash and value cells to the portfolio's local currency. Each cell shows both the original and converted currency codes.
+  - Investment Matrix: Issue listing table: Improved the Cause column with coloring based on the type of cause.
+  - Compliance > Investment Issue > Issue listing table: Improved the Cause column with coloring based on the type of cause.
 
 - Fixes
-  - Reorder exporting investment columns
-  - Exporting FX filename
-  - Handle no unpaid fee tx error
-  - Rounding in cash io fee calculation
-  - Tax payer requirement when tax not equal to 0
-  - UI investment refinement (Table view & Issues)
+  - Reordered the Investment export columns.
+  - Corrected the FX export filename.
+  - Handled the error when no unpaid fee transactions are found.
+  - Corrected rounding in Cash IO fee calculations.
+  - Required a taxpayer when the tax is not equal to 0.
+  - Refined the Investment UI (Table View & Issues).
 
 ### v1.13.2
 - Fixes
-  - "Success Notification" in monthly not automatically close.
-  - Monthly no paper setting when empty db
-  - Missing role permission.
-  - Export Investment and FX
+  - Fixed an issue where the "Success Notification" in Monthly did not close automatically.
+  - Fixed missing paper settings in Monthly when the database is empty.
+  - Added a missing role permission.
+  - Fixed Investment and FX exports.
 
 ### v1.13.1
 - Fixes
-  - Create main cash account select portfolio set when no cash security is present
-  - Unable to create or update user command role
-  - Export Cash In/Out for DB – filename issue
+  - Fixed portfolio selection when creating a main cash account without a cash security.
+  - Fixed an issue preventing the creation or update of the user command role.
+  - Corrected the filename in the Cash In/Out export for DB.
 
 ### v1.13.0
 - Features
-  - Added new roles: Compliance and CMD  
-  - Added log view permission for PF Operation and PF Admin  
-  - Added Cash Transaction Type filter on the History Transactions page  
-  - Fulfilled export requirements for Cash In/Out DB  
+  - Added new roles: Compliance and CMD.
+  - Added log view permission for PF Operation and PF Admin.
+  - Added a Cash Transaction Type filter on the History Transactions page.
+  - Fulfilled export requirements for Cash In/Out DB.
 
 - Fixes
-  - Transaction table notification now clears mutated selected rows  
-  - Sorted list and security currency pair list in the Main Cash Account preview details page  
-  - Input size bug in History Transactions portfolio field  
-  - Deletion issue in Dealing Allocation  
-  - Redemption SIM and Left Cash Currency issues  
+  - The transaction table notification now clears selected rows that have been modified.
+  - Sorted the list and the security currency pair list on the Main Cash Account preview details page.
+  - Fixed an input size bug in the History Transactions portfolio field.
+  - Fixed a deletion issue in Dealing Allocation.
+  - Fixed issues with Redemption SIM and Left Cash Currency.
 
 ### v1.12.0
 - Features
-  - Improved event pub/sub publish retry logic  
-  - Stricter cash security checks when deleting  
-  - Hide Fast Mode in Cash IO (malfunctioning and unused)  
-  - Nav-summary: changed table title language to English  
-  - Prepared database for upcoming compliance features (proving and rules)
+  - Improved event pub/sub publish retry logic.
+  - Added stricter cash security checks when deleting.
+  - Hid Fast Mode in Cash IO (malfunctioning and unused).
+  - Nav-summary: Changed the table title language to English.
+  - Prepared the database for upcoming compliance features (proving and rules).
 
 - Fixes
-  - Investment: allow non-active cash securities if associated positions have zero cash  
-  - Fixed incorrect base currency in FX  
-  - FX trade: auto-calculation of Forward Rate  
-  - Fixed overflow issue in Portfolio Create form for Trustee, Registrar, Auditor, and dropdown inputs  
-  - Investment: issue list displayed “Inv. Date +X” before item was clicked  
-  - Hide Fast Mode in Cash IO (malfunctioning)  
-  - Fixed width issue when selecting long items in Equity Issuer  
+  - Investment: Allowed inactive cash securities if their associated positions have zero cash.
+  - Fixed an incorrect base currency in FX.
+  - FX Trade: Fixed automatic calculation of the Forward Rate.
+  - Fixed an overflow issue in the Portfolio Create form for Trustee, Registrar, Auditor, and dropdown inputs.
+  - Investment: Fixed an issue where the issue list displayed “Inv. Date +X” before an item was clicked.
+  - Hid Fast Mode in Cash IO (malfunctioning).
+  - Fixed a width issue when selecting long items in Equity Issuer.
 
 ### v1.11.0
 - Features:
-  - Added Liquidity stress test
-  - Rework module-wide investment model
+  - Added a Liquidity stress test.
+  - Reworked the module-wide investment model.
 
 - Fixes:
-  - daily: handle missing split & inc generate error
-  - daily: wrong main cash in cashIO
-  - resources: disable date duplicate in calendar
-  - resources: currency pair move model detail input
-  - investment: column width tuning
-  - investment: incorrect placed progress when placed on multiple brokers
-  - dealing: hide Broker Group Target
-  - report: implement unsupport tx in cash
-  - report: handle daily performance no portfolio error message
+  - Daily: Handled errors when split and increase transactions could not be generated.
+  - Daily: Corrected the main cash account in Cash IO.
+  - Resources: Disabled duplicate dates in the calendar.
+  - Resources: Moved the model detail input for currency pairs.
+  - Investment: Adjusted column widths.
+  - Investment: Corrected placement progress when placing orders with multiple brokers.
+  - Dealing: Hid Broker Group Target.
+  - Report: Added support for previously unsupported cash transactions.
+  - Report: Handled the error message when no portfolio is available in Daily Performance.
 
 ### v1.10.0
 - Features:
-  - Added deutsche bank export
+  - Added a Deutsche Bank export.
 
 ### v1.9.0
 - Features:
-  - Added a confirmation modal for WHTax.  
-  - Added a "Select All" button for the Daily Performance report.  
-  - Displayed the ID on the preview for each configurable resource in the global configuration.  
-  - Automatically filtered out unavailable bank accounts when creating or editing cash security.  
+  - Added a confirmation modal for WHTax.
+  - Added a "Select All" button for the Daily Performance report.
+  - Displayed the ID on the preview for each configurable resource in the global configuration.
+  - Automatically filtered out unavailable bank accounts when creating or editing cash security.
 
 - Fixes:
-  - Investment, compliance: The aggregate order rule should not check for the same portfolio.  
-  - Daily: Transactions of type "convert unit" should not be counted in the corporate actions list.  
-  - Corporate Actions: Fixed a data race issue in the corporate action form state.  
-  - Corporate Actions: Fixed an issue where XD stock and cash types could not be created on the same date.  
-  - Fee Code: A warning is now displayed when updating the "Fee Code Period From" and "Period To" fields.  
-  - User Management: Disabled autocomplete when creating a user.  
-  - Employee: Added a missing "Confirm Password" input box when changing passwords.  
-  - Security Type: Creating a security type now disallows a nullable currency and removes the currency requirement.  
-  - Reports: Fixed an issue where performance groups without a benchmark index caused a user error.  
-  - Investment: The zero-out lot size is now fixed at 1 instead of 0.  
-  - Resources: Fixed an issue preventing the update of currency pairs.  
-  - Daily: Fixed an issue preventing FX price adjustments.  
-  - Daily: The "EQ Price Adj" feature now only shows mapped price sources with securities.  
+  - Investment, compliance: The aggregate order rule should not check for the same portfolio.
+  - Daily: Transactions of type "convert unit" should not be counted in the corporate actions list.
+  - Corporate Actions: Fixed a data race issue in the corporate action form state.
+  - Corporate Actions: Fixed an issue where XD stock and cash types could not be created on the same date.
+  - Fee Code: A warning is now displayed when updating the "Fee Code Period From" and "Period To" fields.
+  - User Management: Disabled autocomplete when creating a user.
+  - Employee: Added a missing "Confirm Password" input box when changing passwords.
+  - Security Type: Creating a security type now disallows a nullable currency and removes the currency requirement.
+  - Reports: Fixed an issue where performance groups without a benchmark index caused a user error.
+  - Investment: The zero-out lot size is now fixed at 1 instead of 0.
+  - Resources: Fixed an issue preventing the update of currency pairs.
+  - Daily: Fixed an issue preventing FX price adjustments.
+  - Daily: The "EQ Price Adj" feature now only shows mapped price sources with securities.
 
 
 ### v1.8.0
 - Features:
-  - Added a search box to the backlog sidebar menu.  
-  - Added new role for specific company.  
-  - Added monthly report for specific company.  
-  - Warn users about portfolio end dates.  
-  - Added a clear button to forms with preset features.  
-  - Added a request timeout report.  
+  - Added a search box to the backlog sidebar menu.
+  - Added a new role for a specific company.
+  - Added a monthly report for a specific company.
+  - Added warnings about portfolio end dates.
+  - Added a clear button to forms with preset features.
+  - Added a request timeout report.
 
 - Fixes:
-  - Resource: Fixed issue preventing updates to resource preset names.  
-  - Resource: Validated interest rate condition limits for the "range-to" field.  
-  - System Management: Fixed issue preventing admin user edits.  
-  - Tracing: Removed tracing for fetching FX prices in the production environment.  
-  - Compliance: Fixed incorrect pagination.  
-  - Navigation Summary Report: Fixed an edge case causing an infinite loop.  
-  - Equity Price: Removed duplication.  
-  - Notification: Send a welcome ping notification to clients to prevent reconnection issues.  
-  - Dashboard: Do not show "expired password" warning if there is no latest update.  
+  - Resource: Fixed an issue preventing updates to resource preset names.
+  - Resource: Validated interest rate condition limits for the "range-to" field.
+  - System Management: Fixed an issue preventing admin user edits.
+  - Tracing: Removed tracing for fetching FX prices in the production environment.
+  - Compliance: Fixed incorrect pagination.
+  - Navigation Summary Report: Fixed an edge case causing an infinite loop.
+  - Equity Price: Removed duplication.
+  - Notification: Sent a welcome ping notification to clients to prevent reconnection issues.
+  - Dashboard: Hid the "expired password" warning when there is no latest update.
 
 ### v1.7.6
 - Fixes:
-  - app: fix unhandle 500 error
-  - app: logger not log when panic.
-  - app: hide unuse side module
-  - dashboard: don't show expire password for AD user
-  - resource: int rate cond preview
-  - help: fix wrong link
-  - bechmark: remove benchmark index not cascade delete bechmark index portfolio
-  - compliance: internal error on report on ports with no data
-  - cashio: check bank account open / close
-  - user: gray bg on inactive user
-  - invps: fix wrong error receiver
-  - investment: fix investment matrix not showing errors on outer component
-  - sysmgmt: fix numerical forms in number section
+  - App: Fixed an unhandled 500 error.
+  - App: Fixed an issue where the logger did not log panics.
+  - App: Hid unused sidebar modules.
+  - Dashboard: Hid the expired password warning for AD users.
+  - Resource: Fixed the interest rate condition preview.
+  - Help: Corrected an incorrect link.
+  - Benchmark: Fixed an issue where removing a benchmark index did not cascade to delete its benchmark index portfolios.
+  - Compliance: Fixed an internal report error for portfolios with no data.
+  - Cash IO: Added a check for bank account open/closed status.
+  - User: Added a gray background for inactive users.
+  - Invps: Corrected the error receiver.
+  - Investment: Fixed an issue where the investment matrix did not show errors in the outer component.
+  - System Management: Fixed numeric forms in the number section.
 
 ### v1.7.5
 
-- Fixes: 
-  - Resolve duplicate error logs  
-  - Remove line breaks from LDAP error messages  
-  - Allow SMTP configuration without a username and password  
-  - Remove search price code in Daily EQ Price Adjustment
-  - Handle duplicates in Daily Price Adjustment
-  - Improve TLS connection across all components
-  - Deprecated TLS_CERT, TLS_KEY enviroments
+- Fixes:
+  - Resolved duplicate error logs.
+  - Removed line breaks from LDAP error messages.
+  - Allowed SMTP configuration without a username and password.
+  - Removed the price code search in Daily EQ Price Adjustment.
+  - Handled duplicates in Daily Price Adjustment.
+  - Improved TLS connections across all components.
+  - Deprecated the `TLS_CERT` and `TLS_KEY` environment variables.

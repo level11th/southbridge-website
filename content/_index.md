@@ -11,7 +11,7 @@ Southbridge Documentation
 
 <div class="hx-mb-12">
 {{< hextra/hero-subtitle >}}
-this is Southbridge documentation for Admin/IT person. Dive right into the documentation by clicking "Get Started" button.
+This documentation is for Southbridge administrators and IT staff. Click the "Get Started" button to begin.
 {{< /hextra/hero-subtitle >}}
 </div>
 

@@ -5,17 +5,17 @@ weight: 6
 
 ### Introduction
 
-Even though our Southbridge application can serve TLS, you may want to use a reverse proxy in front of the application. A reverse proxy offers benefits such as load balancing and caching.  
+Although Southbridge can serve TLS, you may want to use a reverse proxy in front of the application. A reverse proxy offers benefits such as load balancing and caching.  
 
-Our application is reverse proxy agnostic, so you can choose the one that best suits your needs, as long as it provides the following features:  
+Southbridge works with any reverse proxy that provides the following features:  
 
-- Forward Host  
-- Forward X-Real-IP  
-- Forward X-Forwarded-For  
+- Forwarding of the `Host` header  
+- Forwarding of the `X-Real-IP` header  
+- Forwarding of the `X-Forwarded-For` header  
 - Support for Server-Sent Events (SSE)  
 
 #### Nginx
-below is example of Nginx configuration.
+Below is an example Nginx configuration:
 
 ```nginx
 server {

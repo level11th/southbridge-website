@@ -3,20 +3,20 @@ title: Maintenance
 weight: 4
 ---
 
-### Check Southbridge Version
+### Check the Southbridge Version
 
 ```shell
 docker run --rm app-image:tag version
 ```
 
-### Update Database Notify Trigger
-The Southbridge application relies on PostgreSQL's trigger feature to notify mutation events on tables. Use the following command to recreate all notification triggers in the database. (`superuser` privileges are required.)
+### Update Database Notification Triggers
+The Southbridge application uses PostgreSQL triggers to send notifications when table data changes. Use the following command to recreate all notification triggers in the database. Superuser privileges are required.
 
 ```shell
 docker run --rm app-image:tag update notify [db connection with superuser]
 ```
 
-or
+Alternatively:
 
 ```shell
 docker run --rm -e SUPER_USER_DB_URL="db_conn_str" app-image:tag update notify

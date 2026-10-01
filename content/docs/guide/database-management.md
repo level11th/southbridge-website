@@ -1,18 +1,17 @@
 
 ---
-title: Database management
+title: Database Management
 weight: 3
 ---
 
 ## Setup
 
-after start PostgreSQL with a superuser,
-we make sure to create a nonroot user for our app, harden our database access security.
-follow these steps:
+After starting PostgreSQL with a superuser account, create a non-superuser account for the application to improve database access security.
+Follow these steps:
 
 {{% steps %}}
 
-### Log into PostgreSQL as the superuser
+### Log in to PostgreSQL as the superuser
 
 Open your terminal and run:
 
@@ -28,8 +27,8 @@ CREATE USER newuser WITH PASSWORD 'secure_password';
 ```
 
 ### Grant Database-Level Permissions
-For database-level permissions, you will need to grant specific privileges to the user.
-For example, to grant the following privileges:
+Grant the user access to the database and its tables.
+The following example grants these table privileges:
 
 - `SELECT`
 - `INSERT`
@@ -55,12 +54,12 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO newuser;
 
 -   **`CONNECT ON DATABASE mydb TO newuser`**: Allows the user `newuser` to connect to the database `mydb`.
 -   **`USAGE ON SCHEMA public TO newuser`**: Allows the user `newuser` to use the `public` schema (default schema where tables are created). Without this, they cannot access tables or objects in that schema.
--   **`GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO newuser`**: Grants the specified permissions (`SELECT`, `UPDATE`) on all sequences within the `public` schema of the database.
+-   **`GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO newuser`**: Grants the specified permissions (`USAGE`, `SELECT`, `UPDATE`) on all sequences within the `public` schema of the database.
 -   **`GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO newuser`**: Grants the specified permissions (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) on all tables within the `public` schema of the database.
 
 ### Grant Permissions on Future Tables
 
-Making `newuser` to automatically have these permissions on any new tables created in the future, use the following command:
+To automatically grant `newuser` these permissions on future tables and sequences, use the following commands:
 
 ```sql
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
@@ -69,7 +68,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public
 GRANT USAGE, SELECT, UPDATE ON SEQUENCES TO newuser;
 ```
 
-This will ensure that new tables in the `public` schema will inherit the same permissions for `newuser`.
+This ensures that new tables and sequences in the `public` schema inherit the same permissions for `newuser`.
 
 {{% /steps %}}
 ---
@@ -133,27 +132,29 @@ Command Breakdown:
 - **Flags:**
   - **`-U postgres`**: Specifies the username (`postgres`) to connect to the database.
   - **`-Fc`**: Indicates that the input is in the custom format, matching the format used during the backup.
-  - **`-C`**: Creates the database before restoring it. If the database already exists, it is dropped and recreated.
+  - **`-C`**: Creates the database before restoring it. The target database is dropped and recreated only if `--clean` is also specified.
   - **`-v`**: Enables verbose mode, providing detailed output during the restoration process.
   - **`-d postgres`**: Specifies the name of the database to connect to for executing the restore process. The database `postgres` is often used as a placeholder for restoration.
 - **`< db.dump`**: Redirects the contents of the `db.dump` file on the host machine to the `pg_restore` command inside the container.
 
-#### Restore to specific database
-this example will show how to restore backup file to specific database.
+#### Restore to a specific database
+
+This example shows how to restore a backup file to a specific database:
 ```bash
 docker exec -i pg pg_restore -U postgres -Fc -v -d my_foo_db < db.dump
 ```
-another useful flags
-- **--no-privileges**: Prevent restoration of access privileges (grant/revoke commands).
-- **--no-owner**: Do not output commands to set ownership of objects to match the original database
-- **--disable-triggers**: It instructs pg_dump to include commands to temporarily disable triggers on the target tables while the data is restored.
+Other useful flags:
 
-#### Restore only specific table
+- **--no-privileges**: Prevents restoration of access privileges (grant/revoke commands).
+- **--no-owner**: Omits commands that set object ownership to match the original database.
+- **--disable-triggers**: Instructs `pg_restore` to temporarily disable triggers during a data-only restore. This requires superuser privileges.
+
+#### Restore only a specific table
 ```bash
 docker exec -i pg pg_restore -U postgres --data-only --disable-triggers -Fc -v -d my_foo_db -t my_foo_table < db.dump
 ```
 
-#### Restore using pg_dump pipe to pg_restore
+#### Restore by piping pg_dump output to pg_restore
 ```bash
 docker exec -i pg pg_dump -Fc -d "conn string" | docker exec -i pg pg_restore -U postgres -d my_foo_db --no-privileges --no-owner
 ```
