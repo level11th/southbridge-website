@@ -5,6 +5,51 @@ next: /docs/changelog
 prev: /docs
 ---
 
+### v1.41.0 - 2026-11-16
+
+#### **Added**
+
+* FX Operations: Redesigned the FX trade import flow.
+* Reports: Added a monthly MSTH PDF report with compound benchmark calculation.
+* Navigation: Added fuzzy search with match highlighting to the sidebar.
+* Localization: Added persistent EN/TH language switching.
+* Theme: Added a persistent light/dark toggle to the sidebar.
+* Daily: Added support for 7-decimal market FX prices.
+* Daily: Added extraction of daily portfolio data into `pf_extract` for MSTH.
+* Daily: Added a confirmation prompt before converting non-numeric equity prices to 0 on import.
+* Masterfile: Added a configurable TH/offshore market option for the Deutsche Bank fund export.
+* Masterfile: Added security group management.
+* Masterfile: Added effective-dated lot-size management.
+* Masterfile: Added Investment CRUD to Security master data.
+* Investment: Added retention of model generations and authoring by percentage.
+* Investment: Added grouped workflows, history, and execution options.
+* Investment: Added an optional portfolio-focused editor view.
+* Investment: Added order details to approval audit logs.
+* Database: Added storage for investment set-options and action macros.
+* Compliance: Added limit tables for rule thresholds, including firm-wide operands, operand preview, and target proving.
+* Compliance: Added evaluation of rule thresholds against limit tables, validation of operand units, and firm-wide trigger targets.
+* MKET: Added export of consolidated PF detail files as a zip.
+
+#### **Changed**
+
+* System Management: Grouped app configuration into tabs with a single combined save.
+* Reports: Grouped MSTH monthly holdings through the Mapping Report.
+* Reports: Shared valuation holding rows with the monthly report.
+
+#### **Fixed**
+
+* Reports: Corrected number formatting in the monthly report.
+* Reports: Aligned MSTH monthly footnotes with holding remarks, moved the footnote marker, and labeled Redemption.
+* Reports: Sorted MSTH monthly holdings by currency, then security code.
+* Reports: Apportioned valuation percent of NAV using the Hamilton method.
+* Investment: Fixed the order management NAV label to use local currency.
+* Investment: Fixed matrix data that arrives out of order.
+* Investment: Corrected order amount currencies.
+* Compliance: Tracked issuer/exchange cause and aggregated by issuer.
+* Masterfile: Clarified request-submission notifications.
+* Resolved various minor bugs.
+
+
 ### v1.40.1 - 2026-10-01
 
 #### **Changed**
